@@ -1,14 +1,7 @@
-function App() {
-  return (
-    <div className="App">
-      <header>포트뽈리오</header>
-      <p>포폴로포포로로롤로롤로</p>
-      <p>포폴로포포로로롤로롤로</p>
-      <p>포폴로포포로로롤로롤로</p>
-      <p>포폴로포포로로롤로롤로</p>
-      <p>포폴로포포로로롤로롤로</p>
-    </div>
-  );
-}
+import React from "react";
+
+const App = () => {
+  return <div>🚧 개인 포트폴리오 사이트 작업중 🚧</div>;
+};
 
 export default App;
