@@ -1,7 +1,14 @@
 import React from 'react';
+import MainRouter from './Router/MainRouter';
+import ResetStyle from './Style/ResetStyle';
 
 const App = () => {
-  return <div>🚧 개인 포트폴리오 사이트 작업중 🚧</div>;
+  return (
+    <>
+      <MainRouter />
+      <ResetStyle />
+    </>
+  );
 };
 
 export default App;
