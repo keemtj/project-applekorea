@@ -12,7 +12,7 @@ const MainRouter = () => {
       <Route
         render={({ location }) => (
           <div>
-            <span>{` ${location.pathname}`}</span>
+            <span>{`${location.pathname} `}</span>
             <span>페이지는 존재하지 않습니다{':('}</span>
           </div>
         )}
