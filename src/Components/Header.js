@@ -5,16 +5,20 @@ const Header = () => {
   return (
     <StHeader>
       <StNav>
-        <a>Home</a>
-        <a>Main</a>
-        <a>Project</a>
-        <a>About</a>
+        <div>
+          <a>Home</a>
+          <a>Main</a>
+          <a>Project</a>
+          <a>About</a>
+        </div>
       </StNav>
       <StSubNav>
-        <h1>KimTaejin Pro 13형</h1>
-        <StDownloadResume href="/" download="이력서.pdf">
-          이력서 다운로드
-        </StDownloadResume>
+        <div>
+          <h1>KimTaejin Pro 13형</h1>
+          <StDownloadResume href="/" download="이력서.pdf">
+            이력서 다운로드
+          </StDownloadResume>
+        </div>
       </StSubNav>
     </StHeader>
   );
@@ -22,6 +26,7 @@ const Header = () => {
 
 const displayStyle = {
   display: 'flex',
+  margin: '0 auto',
   padding: '2rem 19.4rem',
   'align-items': 'center',
   'justify-content': 'space-between',
@@ -32,24 +37,35 @@ const StHeader = styled.header`
 `;
 
 const StNav = styled.nav`
-  ${displayStyle};
   background: ${({ theme }) => theme.color.black};
   height: 4.4rem;
   font-size: 1.3rem;
   font-weight: 300;
   color: #e1e1e1;
+
+  & > div {
+    ${displayStyle};
+    width: 100%;
+    max-width: 140rem;
+  }
 `;
 
 const StSubNav = styled.nav`
-  ${displayStyle};
   width: 100%;
-  height: 5.2rem;
+  height: 100%;
   border-bottom: 1px solid grey;
   background: linear-gradient(rgba(29, 29, 31, 0.72), rgba(29, 29, 31, 0.72)),
     ${({ theme }) => theme.color.bgRgba};
   backdrop-filter: blur(5px);
   font-size: 2rem;
   font-weight: 600;
+
+  & > div {
+    ${displayStyle};
+    padding: 1.5rem 19.4rem;
+    width: 100%;
+    max-width: 140rem;
+  }
 `;
 
 const StDownloadResume = styled.a`
@@ -73,4 +89,5 @@ const StDownloadResume = styled.a`
   }
   font-size: 1.1rem;
 `;
+
 export default Header;
