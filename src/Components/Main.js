@@ -37,18 +37,27 @@ const Main = () => {
           </div>
         </StParagraph2>
       </StSection2>
-      <Grid col={12} row={2} cgap={2} rgap={2} margin={20} padding={2}>
-        <StArticle>
-          <h2>CPU</h2>
-          <p>
-            8코어 CPU 파워 그 자체. M1 칩은 MacBook Pro에 엄청나게 빠른 속도와
-            파워를 선사합니다. 8코어 CPU가 이전 세대 대비 최대 2.8배 더 빨라진
-            프로세싱 속도를 뽐내며 복잡한 워크플로도, 막대한 작업량도 거뜬히
-            처리해내죠.2 게다가 모든 작업에서 놀랄 만큼 탁월한 에너지 효율성을
-            발휘한답니다.
-            <img src="images/image2.png" />
-          </p>
-        </StArticle>
+      <Grid col={12} row={2} cgap={2} rgap={2} margin={0} padding={2}>
+        <StArticle1>
+          <div>
+            <StHeading3>CPU</StHeading3>
+            <div>
+              <StSubHeading>
+                <span>8코어 CPU</span>
+                <span>파워 그 자체.</span>
+              </StSubHeading>
+              <StParagraph3>
+                M1 칩은 MacBook Pro에 엄청나게 빠른 속도와 파워를 선사합니다.
+                8코어 CPU가 이전 세대 대비 최대 2.8배 더 빨라진 프로세싱 속도를
+                뽐내며 복잡한 워크플로도, 막대한 작업량도 거뜬히 처리해내죠.2
+                게다가 모든 작업에서 놀랄 만큼 탁월한 에너지 효율성을
+                발휘한답니다.
+              </StParagraph3>
+            </div>
+            <button type="button">M1이 엄청난 속도를 내는 비결 알아보기</button>
+          </div>
+          <img src="images/image2.png" />
+        </StArticle1>
         {/* <StArticle> */}
         <h2>GPU</h2>
         <p>
@@ -226,13 +235,47 @@ const StParagraph2 = styled.p`
 `;
 
 /* <row-start> / <column-start> / <row-end> / <column-end> */
-const StArticle = styled.article`
+const StArticle1 = styled.article`
   grid-area: 1 / 1 / 1 / 13;
-  border: 1px solid red;
+  background: ${({ theme }) => theme.color.linearGradient};
+  border-radius: 3rem;
   margin-top: 9rem;
+  padding: 3rem 0rem 6rem 3rem;
+  display: flex;
+  width: 100%;
+  height: auto;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  & > img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
-// const StImg = styled.img`
-//   width: 100%;
-// `;
+const StHeading3 = styled.h2`
+  font-size: 2rem;
+  font-weight: 500;
+`;
+
+const StSubHeading = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  font-weight: bolder;
+  & :first-child {
+    color: ${({ theme }) => theme.color.purple};
+  }
+`;
+
+const StParagraph3 = styled.p`
+  width: 30rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+`;
+
 export default Main;
