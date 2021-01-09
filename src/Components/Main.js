@@ -65,13 +65,9 @@ const Main = () => {
 
 const StMain = styled.main`
   width: 100%;
-  max-width: 140rem;
+  max-width: 146rem;
   margin: 0 auto;
   color: white;
-  & img {
-    width: 100%;
-    height: 100%;
-  }
 `;
 
 export default Main;
