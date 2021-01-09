@@ -1,14 +1,10 @@
 import React, { createContext } from 'react';
 import initialState from '../Reducer/mainReducer';
 
-const createContext(initialState);
+const MainContext = createContext(initialState);
 
-const MainContext = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+const MainProvider = ({ children }) => {
+  return <MainContext.Provider>{children}</MainContext.Provider>;
 };
 
-export default MainContext;
+export { MainContext, MainProvider };
