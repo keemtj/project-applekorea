@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Bag = () => {
+const BagPage = () => {
   return <div></div>;
 };
 
-export default Bag;
+export default BagPage;

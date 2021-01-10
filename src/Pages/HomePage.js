@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../Components/Global/Header';
 import Footer from '../Components/Global/Footer';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Ipad = () => {
+const WatchPage = () => {
   return <div></div>;
 };
 
-export default Ipad;
+export default WatchPage;

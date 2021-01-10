@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Iphone = () => {
+const MusicPage = () => {
   return <div></div>;
 };
 
-export default Iphone;
+export default MusicPage;

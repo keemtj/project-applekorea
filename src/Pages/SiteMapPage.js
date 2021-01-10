@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SiteMap = () => {
+const SiteMapPage = () => {
   return <div>사이트 맵</div>;
 };
 
-export default SiteMap;
+export default SiteMapPage;

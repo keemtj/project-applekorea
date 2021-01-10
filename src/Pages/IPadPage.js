@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Support = () => {
+const IPadPage = () => {
   return <div></div>;
 };
 
-export default Support;
+export default IPadPage;
