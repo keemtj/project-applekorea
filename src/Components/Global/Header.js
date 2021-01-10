@@ -14,7 +14,7 @@ const Header = () => {
       </StNav>
       <StSubNav>
         <div>
-          <h1>KimTaejin Pro 13형</h1>
+          <div>KimTaejin Pro 13형</div>
           <StDownloadResume href="/" download="이력서.pdf">
             이력서 다운로드
           </StDownloadResume>

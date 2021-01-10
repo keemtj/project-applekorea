@@ -24,16 +24,16 @@ const MainSection = () => {
         </StHeading2>
         <StHeading2>칩 하나에 담은 거대한 도약.</StHeading2>
         <StParagraph2>
-          <div>
+          <span>
             드디어 찾아왔습니다. Mac용으로 Apple에서 직접 디자인한 최초의 칩.
-          </div>
-          <div>
+          </span>
+          <span>
             160억 개라는 엄청난 수의 트랜지스터가 집적되어 있는 Apple M1 시스템
             온 칩(SoC, System on Chip)은 자그마한 칩 하나에 CPU, GPU, Neural
             Engine, I/O 등 수많은 요소가 통합되어 있습니다. 놀라운 성능과 맞춤형
             테크놀로지, 업계 최고 수준의 전력 효율을 자랑하는 M1은 Mac의 성능을
             단지 한 단계 높이는 것이 아니라 완전히 새로운 경지로 끌어올려주죠.
-          </div>
+          </span>
         </StParagraph2>
       </StSection2>
     </>
@@ -47,7 +47,7 @@ const StVideo = styled.video`
 `;
 
 const StSection = styled.section`
-  padding: 4rem 19.4rem;
+  margin: 0rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,24 +84,28 @@ const StParagraph1 = styled.p`
 `;
 
 const StSection2 = styled.section`
-  padding: 10rem 19.4rem 4rem;
+  margin: 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StHeading2 = styled.h2`
-  width: fit-content;
-  font-size: 7.5rem;
-  font-weight: 800;
   text-align: left;
+  margin-top: 3rem;
+  font-size: 9rem;
+  font-weight: 800;
 `;
 
 const StParagraph2 = styled.p`
   margin-top: 3rem;
-  width: calc(100% - 24rem);
+  width: 88.75rem;
   color: grey;
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 600;
-  line-height: 1.4;
   text-align: left;
+  line-height: 1.5;
   word-break: keep-all;
 `;
 

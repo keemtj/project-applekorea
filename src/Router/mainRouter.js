@@ -1,11 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import MainPage from '../Pages/MainPage';
+import Home from '../Pages/Home';
+import MacBookPro from '../Pages/MacBookPro';
 
 const MainRouter = () => {
   return (
     <Switch>
-      <Route path="/project-applekorea" component={MainPage} exact></Route>
+      <Route path="/project-applekorea" component={Home} exact />
+      <Route path="/project-applekorea/mac" component={MacBookPro} exact />
+      <Route path="/project-applekorea/ipad" />
+      <Route path="/project-applekorea/iphone" />
+      <Route path="/project-applekorea/watch" />
+      <Route path="/project-applekorea/music" />
+      <Route path="/project-applekorea/bag" />
+      <Route path="/project-applekorea/support" />
       <Route
         render={({ location }) => (
           <div style={{ color: 'white' }}>

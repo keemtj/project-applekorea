@@ -1,5 +1,5 @@
 const initialState = {
-  hardwere: [
+  hardware: [
     {
       headingText: 'CPU',
       headline: ['8코어 CPU', '파워 그자체.'],
@@ -94,4 +94,13 @@ const initialState = {
   ],
 };
 
-export default initialState;
+const mainReducer = (state, action) => {
+  switch (action.type) {
+    case 'SUCCESS':
+      return state;
+    default:
+      throw new Error(`Unhandled action type: ${action.type}`);
+  }
+};
+
+export { initialState, mainReducer };

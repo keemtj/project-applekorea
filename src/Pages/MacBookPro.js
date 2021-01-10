@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../Components/Header';
+import Header from '../Components/Global/Header';
 import Main from '../Components/Main';
-import Footer from '../Components/Footer';
+import Footer from '../Components/Global/Footer';
 
-const MainPage = () => {
+const MacPage = () => {
   return (
     <>
       <Header />
@@ -13,4 +13,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default MacPage;
