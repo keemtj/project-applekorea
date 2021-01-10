@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Grid from '../Layout/Grid';
 import Article from './Article';
+import { MainContext } from '../Contexts/MainContext';
 
 const Articles = () => {
-  const list = [0, 1, 2];
+  const context = useContext(MainContext);
+  console.log(context);
+  const list = [1, 2, 3];
   return (
     <Grid
       col={12}
