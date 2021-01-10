@@ -6,9 +6,9 @@ const MainRouter = () => {
   return (
     <Switch>
       <Route path="/" component={MainPage} exact></Route>
-      <Route path="/project-weather"></Route>
-      <Route path="/project-movieApp"></Route>
-      <Route path="/project-countdown"></Route>
+      {/* <Route path="/project-weather"></Route> */}
+      {/* <Route path="/project-movieApp"></Route> */}
+      {/* <Route path="/project-countdown"></Route> */}
       <Route
         render={({ location }) => (
           <div>
