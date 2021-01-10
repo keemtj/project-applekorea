@@ -1,29 +1,32 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { LogoApple } from '@styled-icons/ionicons-solid/LogoApple';
+import { Search } from '@styled-icons/ionicons-outline/Search';
+import { Bag } from '@styled-icons/ionicons-outline/Bag';
 
 const Header = () => {
   return (
     <StHeader>
-      <nav>
+      <StNav>
         <StUl>
           <li>
             <StNavLink
-              activeClassName={'active'}
+              activeClassName={('active', 'home')}
               to="/project-applekorea"
               exact
             >
-              
+              <StLogoApple />
             </StNavLink>
           </li>
           <li>
             <StNavLink activeClassName={'active'} to="/project-applekorea/mac">
-              Mac
+              <span>Mac</span>
             </StNavLink>
           </li>
           <li>
             <StNavLink activeClassName={'active'} to="/project-applekorea/ipad">
-              iPad
+              <span>iPad</span>
             </StNavLink>
           </li>
           <li>
@@ -31,7 +34,7 @@ const Header = () => {
               activeClassName={'active'}
               to="/project-applekorea/iphone"
             >
-              iPhone
+              <span>iPhone</span>
             </StNavLink>
           </li>
           <li>
@@ -39,7 +42,7 @@ const Header = () => {
               activeClassName={'active'}
               to="/project-applekorea/watch"
             >
-              Watch
+              <span>Watch</span>
             </StNavLink>
           </li>
           <li>
@@ -47,7 +50,7 @@ const Header = () => {
               activeClassName={'active'}
               to="/project-applekorea/music"
             >
-              Music
+              <span>Music</span>
             </StNavLink>
           </li>
           <li>
@@ -55,24 +58,21 @@ const Header = () => {
               activeClassName={'active'}
               to="/project-applekorea/support"
             >
-              Support
+              <span>Support</span>
             </StNavLink>
           </li>
           <li>
-            <StNavLink
-              activeClassName={'active'}
-              to="/project-applekorea/support"
-            >
-              Support
+            <StNavLink activeClassName={'active'} to="/project-applekorea/map">
+              <StSearch />
             </StNavLink>
           </li>
           <li>
             <StNavLink activeClassName={'active'} to="/project-applekorea/bag">
-              Shop
+              <StBag />
             </StNavLink>
           </li>
         </StUl>
-      </nav>
+      </StNav>
     </StHeader>
   );
 };
@@ -82,28 +82,31 @@ const StHeader = styled.header`
   height: 4.4rem;
 `;
 
+const StNav = styled.nav`
+  max-width: 100rem;
+  height: 100%;
+  margin: 0 auto;
+`;
+
 const StUl = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* max-width: 100rem; */
-  /* height: 100%; */
-  /* margin: 0 auto; */
-  font-weight: 300;
-  /* overflow: hidden; */
+  height: 100%;
 `;
 
 const StNavLink = styled(NavLink)`
   padding: 0rem 1rem;
   color: #d6d6d6;
   font-size: 1.4rem;
+  font-weight: 300;
   text-decoration: none;
-  &:first-child {
-    font-size: 2.3rem;
-    vertical-align: text-top;
+  letter-spacing: 0.01rem;
+  &.home {
+    color: #d6d6d6;
   }
-  &.active:not(:first-child) {
-    opacity: 0.8;
+  &.active {
+    color: #a5a5a5;
   }
   &:not(.active) {
     transition: color 0.3s ease;
@@ -111,6 +114,16 @@ const StNavLink = styled(NavLink)`
       color: white;
     }
   }
+`;
+
+const StLogoApple = styled(LogoApple)`
+  width: 2.1rem;
+`;
+const StSearch = styled(Search)`
+  width: 2.15rem;
+`;
+const StBag = styled(Bag)`
+  width: 2.15rem;
 `;
 
 export default Header;

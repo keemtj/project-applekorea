@@ -23,7 +23,7 @@ const MainRouter = () => {
       <Route path={`${BASE_URL}/music`} component={MusicPage} />
       <Route path={`${BASE_URL}/bag`} component={BagPage} />
       <Route path={`${BASE_URL}/support`} component={SupportPage} />
-      <Route path={`${BASE_URL}`} component={SiteMapPage} />
+      <Route path={`${BASE_URL}/sitemap`} component={SiteMapPage} />
       <Route render={() => <NotFound />} />
     </Switch>
   );
