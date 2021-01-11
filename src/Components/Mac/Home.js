@@ -18,7 +18,11 @@ const Home = () => {
           </StList>
         </StMoreInfo>
         <Link to="/project-applekorea/mac">
-          <StBackgroundImage />
+          {/* <StBackgroundImage /> */}
+          <StImage
+            src="project-applekorea/images/home_airpods_max.jpg"
+            alt="에어팟 맥스"
+          />
         </Link>
       </StSection>
     </StMain>
@@ -33,17 +37,24 @@ const StSection = styled.section`
   width: 100%;
   height: 70rem;
   position: relative;
+  overflow: hidden;
 `;
 
 const StMoreInfo = styled.ul`
-  position: absolute;
-  bottom: 5rem;
-  left: calc(50% - 11.6rem);
-  width: 23.2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  position: absolute;
+  z-index: 2;
+  bottom: 5rem;
+  left: calc(50% - 10rem);
+
+  width: fit-content;
+  & > :last-child {
+    margin-left: 3rem;
+  }
   font-size: 2rem;
 `;
 
@@ -65,12 +76,20 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StBackgroundImage = styled.div`
-  background-image: url(project-applekorea/images/home_airpods_max.jpg);
-  background-repeat: no-repeat;
-  background-size: 210%;
-  background-position: center;
+const StImage = styled.img`
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -50%;
   height: 100%;
 `;
+
+// const StBackgroundImage = styled.div`
+//   background-image: url(${process.env.PUBLIC_URL} + 'project-applekorea/images/home_airpods_max.jpg');
+//   background-repeat: no-repeat;
+//   background-size: 210%;
+//   background-position: center;
+//   height: 100%;
+// `;
 
 export default Home;
