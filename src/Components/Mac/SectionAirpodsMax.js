@@ -44,7 +44,7 @@ const StMoreInfo = styled.ul`
   position: absolute;
   z-index: 2;
   bottom: 5rem;
-  left: calc(50% - 10rem);
+  left: calc(50% - 11rem);
 
   width: fit-content;
   & > :last-child {
