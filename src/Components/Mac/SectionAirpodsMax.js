@@ -30,7 +30,6 @@ const SectionAirpodsMax = () => {
 const StSection = styled.section`
   grid-area: 1 / 1 / 1 / 1;
   width: 100%;
-  height: 70rem;
   position: relative;
   overflow: hidden;
 `;

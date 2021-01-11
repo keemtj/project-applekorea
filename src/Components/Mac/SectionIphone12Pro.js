@@ -35,7 +35,6 @@ const SectionIphone12Pro = () => {
 const StSection = styled.section`
   grid-area: 3 / 1 / 3 / 1;
   width: 100%;
-  height: 70rem;
   position: relative;
   overflow: hidden;
 `;
