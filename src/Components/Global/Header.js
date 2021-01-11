@@ -79,7 +79,7 @@ const Header = () => {
 
 const StHeader = styled.header`
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   background: #333333;
   height: 4.4rem;
