@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../Components/Global/Header';
 import Footer from '../Components/Global/Footer';
+import Home from '../Components/Mac/Home';
 
 const HomePage = () => {
   return (
     <>
       <Header />
-      <div style={{ color: 'white' }}>메인 홈페이지</div>
+      <Home />
       <Footer />
     </>
   );
