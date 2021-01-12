@@ -2,8 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Grid from '../../Layout/Grid';
 import SectionAirpodsMax from './SectionAirpodsMax';
+import SectionIpadAir from './SectionIpadAir';
 import SectionIphone12 from './SectionIphone12';
 import SectionIphone12Pro from './SectionIphone12Pro';
+import SectionMacBookAir from './SectionMacBookAir';
+import SectionMacBookPro from './SectionMacBookPro';
+import SectionNewSeason from './SectionNewSeason';
+import SectionNewStore from './SectionNewStore';
+import SectionWatch from './SectionWatch';
 
 const Home = () => {
   return (
@@ -16,7 +22,7 @@ const Home = () => {
       <Grid
         col={2}
         row={3}
-        height={50}
+        height={60}
         cgap={1}
         rgap={1}
         paddingTop={1}
@@ -24,24 +30,12 @@ const Home = () => {
         paddingLeft={1}
         paddingRight={1}
       >
-        <section
-          style={{ gridArea: '1/1/1/1', border: '1px solid red' }}
-        ></section>
-        <section
-          style={{ gridArea: '1/2/1/2', border: '1px solid blue' }}
-        ></section>
-        <section
-          style={{ gridArea: '2/1/2/1', border: '1px solid green' }}
-        ></section>
-        <section
-          style={{ gridArea: '2/2/2/2', border: '1px solid purple' }}
-        ></section>
-        <section
-          style={{ gridArea: '3/1/3/1', border: '1px solid yellowgreen' }}
-        ></section>
-        <section
-          style={{ gridArea: '3/2/3/2', border: '1px solid cyan' }}
-        ></section>
+        <SectionWatch />
+        <SectionIpadAir />
+        <SectionMacBookAir />
+        <SectionNewSeason />
+        <SectionNewStore />
+        <SectionMacBookPro />
       </Grid>
     </StMain>
   );
