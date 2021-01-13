@@ -16,6 +16,7 @@ const Header = () => {
               to="/project-applekorea/"
               exact
             >
+              <h1 hidden={true}>Apple Home</h1>
               <StLogoApple />
             </StNavLink>
           </li>
