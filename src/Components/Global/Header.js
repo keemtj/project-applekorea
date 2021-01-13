@@ -13,7 +13,7 @@ const Header = () => {
           <li>
             <StNavLink
               activeClassName={('active', 'home')}
-              to="/project-applekorea"
+              to="/project-applekorea/"
               exact
             >
               <StLogoApple />

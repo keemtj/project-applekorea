@@ -15,8 +15,8 @@ const MainRouter = () => {
   const BASE_URL = '/project-applekorea';
   return (
     <Switch>
-      <Route path={`${BASE_URL}`} component={HomePage} exact />
-      <Route path={`${BASE_URL}/mac`} component={MacPage} exact />
+      <Route path={`${BASE_URL}/`} component={HomePage} exact />
+      <Route path={`${BASE_URL}/mac`} component={MacPage} />
       <Route path={`${BASE_URL}/ipad`} component={IPadPage} />
       <Route path={`${BASE_URL}/iphone`} component={IPhonePage} />
       <Route path={`${BASE_URL}/watch`} component={WatchPage} />

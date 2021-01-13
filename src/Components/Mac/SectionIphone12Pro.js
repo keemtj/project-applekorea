@@ -22,10 +22,7 @@ const SectionIphone12Pro = () => {
         </StList>
       </StMoreInfo>
       <Link to="/project-applekorea/mac">
-        <StImage
-          src="project-applekorea/images/home_iphone_12_Pro.jpg"
-          alt="에어팟 맥스"
-        />
+        <StImage src="images/home_iphone_12pro.jpg" alt="에어팟 맥스" />
       </Link>
     </StSection>
   );

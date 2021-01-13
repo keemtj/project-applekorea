@@ -17,10 +17,7 @@ const SectionNewStore = () => {
         </StList>
       </StMoreInfo>
       <Link to="/project-applekorea/mac">
-        <StImage
-          src="project-applekorea/images/home_new_store.jpg"
-          alt="애플 여의도"
-        />
+        <StImage src="images/home_new_store.jpg" alt="애플 여의도" />
       </Link>
     </StSection>
   );

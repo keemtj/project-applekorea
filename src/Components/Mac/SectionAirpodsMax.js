@@ -18,10 +18,7 @@ const SectionAirpodsMax = () => {
       </StMoreInfo>
       <Link to="/project-applekorea/mac">
         {/* <StBackgroundImage /> */}
-        <StImage
-          src="project-applekorea/images/home_airpods_max.jpg"
-          alt="에어팟 맥스"
-        />
+        <StImage src="images/home_airpods_max.jpg" alt="에어팟 맥스" />
       </Link>
     </StSection>
   );
