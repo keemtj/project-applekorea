@@ -7,24 +7,19 @@ const SectionNewStore = () => {
   return (
     <StSection>
       <StWrapper>
-        <h2>iPhone 12</h2>
-        <div>스피드 그 이상의 스피드.</div>
-        <p>가격은 ₩950,000부터(보상 판매* 미적용)</p>
+        <h2>Apple 여의도</h2>
+        <div>곧 만나요.</div>
       </StWrapper>
       <StMoreInfo>
         <StList>
           <StLink to="/project-applekorea/mac">더 알아보기</StLink>
           <StChevronRight />
         </StList>
-        <StList>
-          <StLink to="/project-applekorea/mac">구입하기</StLink>
-          <StChevronRight />
-        </StList>
       </StMoreInfo>
       <Link to="/project-applekorea/mac">
         <StImage
-          src="project-applekorea/images/home_iphone_12.jpg"
-          alt="에어팟 맥스"
+          src="project-applekorea/images/home_new_store.jpg"
+          alt="애플 여의도"
         />
       </Link>
     </StSection>
@@ -47,25 +42,19 @@ const StWrapper = styled.div`
 
   position: absolute;
   z-index: 2;
-  top: 7rem;
+  top: 5rem;
   left: calc(50% - 20rem);
   right: 50%;
 
   width: 40rem;
 
   & > h2 {
-    font-size: 5.5rem;
+    font-size: 3.5rem;
     font-weight: 500;
   }
   & > div {
-    margin-top: 2rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-  }
-  & > p {
-    margin-top: 2.5rem;
-    color: #86868b;
-    font-size: 1.6rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
     font-weight: 400;
   }
 `;
@@ -78,14 +67,11 @@ const StMoreInfo = styled.ul`
 
   position: absolute;
   z-index: 2;
-  top: 35%;
-  left: calc(50% - 11rem);
+  top: 23%;
+  left: calc(50% - 4.5rem);
 
   width: fit-content;
-  & > :last-child {
-    margin-left: 3rem;
-  }
-  font-size: 2rem;
+  font-size: 1.6rem;
 `;
 
 const StList = styled.li`
@@ -109,9 +95,8 @@ const StChevronRight = styled(ChevronRight)`
 const StImage = styled.img`
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: -50%;
-  height: 100%;
+  left: -30%;
+  width: 160%;
 `;
 
 export default SectionNewStore;

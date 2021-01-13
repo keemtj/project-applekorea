@@ -7,9 +7,8 @@ const SectionIpadAir = () => {
   return (
     <StSection>
       <StWrapper>
-        <h2>iPhone 12</h2>
-        <div>스피드 그 이상의 스피드.</div>
-        <p>가격은 ₩950,000부터(보상 판매* 미적용)</p>
+        <h2>iPad Air</h2>
+        <div>강력하다. 다채롭다. 경이롭다. </div>
       </StWrapper>
       <StMoreInfo>
         <StList>
@@ -23,7 +22,7 @@ const SectionIpadAir = () => {
       </StMoreInfo>
       <Link to="/project-applekorea/mac">
         <StImage
-          src="project-applekorea/images/home_iphone_12.jpg"
+          src="project-applekorea/images/home_ipad_air.jpg"
           alt="에어팟 맥스"
         />
       </Link>
@@ -47,25 +46,19 @@ const StWrapper = styled.div`
 
   position: absolute;
   z-index: 2;
-  top: 7rem;
+  top: 5rem;
   left: calc(50% - 20rem);
   right: 50%;
 
   width: 40rem;
 
   & > h2 {
-    font-size: 5.5rem;
+    font-size: 4rem;
     font-weight: 500;
   }
   & > div {
-    margin-top: 2rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-  }
-  & > p {
-    margin-top: 2.5rem;
-    color: #86868b;
-    font-size: 1.6rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
     font-weight: 400;
   }
 `;
@@ -78,14 +71,14 @@ const StMoreInfo = styled.ul`
 
   position: absolute;
   z-index: 2;
-  top: 35%;
-  left: calc(50% - 11rem);
+  top: 25%;
+  left: calc(50% - 9.5rem);
 
   width: fit-content;
   & > :last-child {
     margin-left: 3rem;
   }
-  font-size: 2rem;
+  font-size: 1.6rem;
 `;
 
 const StList = styled.li`
@@ -109,8 +102,8 @@ const StChevronRight = styled(ChevronRight)`
 const StImage = styled.img`
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: -50%;
+  left: -30%;
+  bottom: 0;
   height: 100%;
 `;
 

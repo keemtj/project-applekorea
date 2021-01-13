@@ -7,9 +7,9 @@ const SectionMacBookPro = () => {
   return (
     <StSection>
       <StWrapper>
-        <h2>iPhone 12</h2>
-        <div>스피드 그 이상의 스피드.</div>
-        <p>가격은 ₩950,000부터(보상 판매* 미적용)</p>
+        <h2>MacBook Pro</h2>
+        <div>프로 중의 프로.</div>
+        <p>13형 모델</p>
       </StWrapper>
       <StMoreInfo>
         <StList>
@@ -23,8 +23,8 @@ const SectionMacBookPro = () => {
       </StMoreInfo>
       <Link to="/project-applekorea/mac">
         <StImage
-          src="project-applekorea/images/home_iphone_12.jpg"
-          alt="에어팟 맥스"
+          src="project-applekorea/images/home_macbook_pro_13.jpg"
+          alt="맥북 프로 13형"
         />
       </Link>
     </StSection>
@@ -47,24 +47,24 @@ const StWrapper = styled.div`
 
   position: absolute;
   z-index: 2;
-  top: 7rem;
+  top: 5rem;
   left: calc(50% - 20rem);
   right: 50%;
 
   width: 40rem;
+  color: white;
 
   & > h2 {
-    font-size: 5.5rem;
+    font-size: 4rem;
     font-weight: 500;
   }
   & > div {
-    margin-top: 2rem;
-    font-size: 2.5rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
     font-weight: 400;
   }
   & > p {
-    margin-top: 2.5rem;
-    color: #86868b;
+    margin-top: -9.5rem;
     font-size: 1.6rem;
     font-weight: 400;
   }
@@ -78,14 +78,14 @@ const StMoreInfo = styled.ul`
 
   position: absolute;
   z-index: 2;
-  top: 35%;
-  left: calc(50% - 11rem);
+  top: 25%;
+  left: calc(50% - 9.5rem);
 
   width: fit-content;
   & > :last-child {
     margin-left: 3rem;
   }
-  font-size: 2rem;
+  font-size: 1.6rem;
 `;
 
 const StList = styled.li`
