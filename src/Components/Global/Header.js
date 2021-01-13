@@ -64,11 +64,13 @@ const Header = () => {
           </li>
           <li>
             <StNavLink activeClassName={'active'} to="/project-applekorea/map">
+              <span hidden={true}>Search</span>
               <StSearch />
             </StNavLink>
           </li>
           <li>
             <StNavLink activeClassName={'active'} to="/project-applekorea/bag">
+              <span hidden={true}>Shopping Bag</span>
               <StBag />
             </StNavLink>
           </li>

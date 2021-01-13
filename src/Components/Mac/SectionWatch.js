@@ -10,7 +10,7 @@ const SectionWatch = () => {
       <StWrapper>
         <h2>
           <StLogoApple />
-          WATCH
+          Watch
         </h2>
         <p>SERIES 6</p>
         <div>건강의 미래, 이미 손목 위에.</div>
@@ -63,6 +63,7 @@ const StWrapper = styled.div`
     width: fit-content;
     font-size: 3rem;
     font-weight: 500;
+    text-transform: uppercase;
   }
   & > div {
     margin-top: 1.5rem;

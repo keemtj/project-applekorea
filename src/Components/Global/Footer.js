@@ -133,6 +133,7 @@ const Footer = () => {
 };
 
 const StFooter = styled.footer`
+  padding: 0rem 1.5rem;
   width: 100%;
   background-color: #f5f5f7;
   font-size: 1.1rem;
@@ -150,6 +151,7 @@ const StProvision = styled.section`
   padding-bottom: 2rem;
   color: #86868b;
   line-height: 1.5;
+  word-break: keep-all;
   & > a {
     color: #515154;
     text-decoration: none;
