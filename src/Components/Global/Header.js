@@ -78,11 +78,12 @@ const Header = () => {
 };
 
 const StHeader = styled.header`
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1.5rem);
+  width: 100%;
+  height: 4.4rem;
   position: fixed;
   z-index: 3;
-  width: 100%;
-  background: #333333;
-  height: 4.4rem;
 `;
 
 const StNav = styled.nav`
