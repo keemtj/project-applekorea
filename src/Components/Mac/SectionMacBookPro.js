@@ -110,7 +110,7 @@ const StImage = styled.img`
   position: absolute;
   z-index: 1;
   top: 0;
-  left: -50%;
+  left: -28.5%;
   height: 100%;
 `;
 
