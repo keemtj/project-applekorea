@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '../Layout/Grid';
+import Grid from '../../Layout/Grid';
 import Article from './Article';
 
 const Articles = () => {

@@ -16,6 +16,7 @@ const SubNavigation = () => {
 const StSubNav = styled.nav`
   position: sticky;
   top: 0rem;
+  z-index: 3;
 
   width: 100%;
   height: 5.5rem;
