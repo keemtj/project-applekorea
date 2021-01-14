@@ -1,38 +1,45 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const SubNavigation = () => {
   return (
     <StSubNav>
-      <div>
-        <div>KimTaejin Pro 13형</div>
-        <StDownloadResume href="/" download="이력서.pdf">
-          이력서 다운로드
-        </StDownloadResume>
-      </div>
+      <StWrapper>
+        <h2>MacBook Pro 13형</h2>
+        <StLink to="/project-applekorea/bag">구입하기</StLink>
+      </StWrapper>
     </StSubNav>
   );
 };
 
 const StSubNav = styled.nav`
+  position: sticky;
+  top: 0rem;
+
   width: 100%;
-  height: 100%;
-  border-bottom: 1px solid grey;
-  background: linear-gradient(rgba(29, 29, 31, 0.72), rgba(29, 29, 31, 0.72)),
-    ${({ theme }) => theme.color.bgRgba};
-  backdrop-filter: blur(5px);
+  height: 5.5rem;
+  border-bottom: 1px solid #3d3d3d;
+  background-color: rgba(51, 51, 51, 0.5);
+  backdrop-filter: blur(1.5rem);
+  color: white;
   font-size: 2rem;
   font-weight: 600;
-
-  & > div {
-    ${displayStyle};
-    padding: 1.5rem 19.4rem;
-    width: 100%;
-    max-width: 140rem;
-  }
 `;
 
-const StDownloadResume = styled.a`
+const StWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+  width: 100%;
+  max-width: 100rem;
+  height: 100%;
+`;
+
+const StLink = styled(Link)`
   display: block;
   border: none;
   border-radius: 2rem;

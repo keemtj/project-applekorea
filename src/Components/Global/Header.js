@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { LogoApple } from '@styled-icons/ionicons-solid/LogoApple';
 import { Search } from '@styled-icons/ionicons-outline/Search';
 import { Bag } from '@styled-icons/ionicons-outline/Bag';
 
 const Header = () => {
+  const isFixed = false;
   return (
-    <StHeader>
+    <StHeader isFixed={isFixed}>
       <StNav>
         <StUl>
           <li>
@@ -85,7 +86,11 @@ const StHeader = styled.header`
   backdrop-filter: blur(1.5rem);
   width: 100%;
   height: 4.4rem;
-  position: fixed;
+  ${({ isFixed }) =>
+    isFixed &&
+    css`
+      position: fixed;
+    `};
   z-index: 3;
 `;
 

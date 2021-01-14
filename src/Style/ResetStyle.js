@@ -18,6 +18,9 @@ const ResetStyle = createGlobalStyle`
     border: none;
     background: transparent;
   }
+  body {
+    background: #000000;
+  }
 `;
 
 export default ResetStyle;
