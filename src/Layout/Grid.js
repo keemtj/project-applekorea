@@ -17,6 +17,7 @@ const Grid = ({
   paddingBottom,
   paddingLeft,
   paddingRight,
+  style,
   children,
 }) => {
   return (
@@ -36,6 +37,7 @@ const Grid = ({
       paddingBottom={paddingBottom}
       paddingLeft={paddingLeft}
       paddingRight={paddingRight}
+      style={style}
     >
       {children}
     </StGrid>
