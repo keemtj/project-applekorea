@@ -2,24 +2,37 @@ import React from 'react';
 import styled from 'styled-components';
 import MainSection from './MainSection';
 import Grid from '../../Layout/Grid';
-// import Article from './Article';
+import Article from './Article';
 
 const Mac = () => {
+  const mainsectionlist = [
+    '1/1/1/13',
+    '2/1/2/13',
+    '3/1/3/13',
+    '4/1/4/13',
+    '5/1/5/7',
+    '5/7/5/13',
+    '6/1/6/5',
+    '6/5/6/13',
+    '7/1/7/5',
+    '7/5/7/9',
+    '7/9/7/13',
+  ];
   return (
     <StMain>
       <MainSection />
-      <Grid
+      <StGrid
         col={12}
         row={7}
-        width={140}
         height={70}
         cgap={1.5}
         rgap={1.5}
         style={{ width: '140rem', margin: '0 auto' }}
       >
-        {/* <Article /> */}
-        {/* <row-start> / <column-start> / <row-end> / <column-end> */}
-        <section style={{ gridArea: '1/1/1/13', border: '1px solid red' }}>
+        {mainsectionlist.map((gridArea, i) => (
+          <Article gridArea={gridArea} key={i} />
+        ))}
+        {/* <section style={{ gridArea: '1/1/1/13', border: '1px solid red' }}>
           섹션1
         </section>
         <section style={{ gridArea: '2/1/2/13', border: '1px solid orange' }}>
@@ -51,30 +64,30 @@ const Mac = () => {
         </section>
         <section style={{ gridArea: '7/9/7/13', border: '1px solid green' }}>
           섹션11
-        </section>
-      </Grid>
+        </section> */}
+      </StGrid>
       <section>레티나 섹션</section>
-      <Grid>
+      <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>
         <section>섹션3</section>
-      </Grid>
+      </StGrid>
       <section>마이크 섹션</section>
-      <Grid>
+      <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>
-      </Grid>
+      </StGrid>
       <section>키보드 섹션</section>
-      <Grid>
+      <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>
         <section>섹션3</section>
-      </Grid>
+      </StGrid>
       <section>연결성 섹션</section>
-      <Grid>
+      <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>
-      </Grid>
+      </StGrid>
     </StMain>
   );
 };
@@ -82,6 +95,11 @@ const Mac = () => {
 const StMain = styled.main`
   width: 100%;
   color: white;
+`;
+
+const StGrid = styled(Grid)`
+  width: 140rem;
+  margin: 0 auto;
 `;
 
 export default Mac;

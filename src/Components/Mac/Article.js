@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Article = ({ row }) => {
+const Article = ({ gridArea }) => {
   return (
-    <StArticle row={row}>
+    <StArticle gridArea={gridArea}>
       <StHeading>CPU</StHeading>
       <StWrapper>
         <div>
@@ -30,7 +30,7 @@ const Article = ({ row }) => {
 /* <row-start> / <column-start> / <row-end> / <column-end> */
 
 const StArticle = styled.article`
-  grid-area: ${({ row }) => row} / 1 / ${({ row }) => row} / 13;
+  grid-area: ${({ gridArea }) => gridArea};
   border: none;
   border-radius: 3rem;
   background: ${({ theme }) => theme.color.linearGradient};
