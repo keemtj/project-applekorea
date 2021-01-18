@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import MainSection from './MainSection';
 import Grid from '../../Layout/Grid';
 import Article from './Article';
+import RetinaSection from './RetinaSection';
 
 const Mac = () => {
   const mainsectionlist = [
@@ -66,7 +67,7 @@ const Mac = () => {
           섹션11
         </section> */}
       </StGrid>
-      <section>레티나 섹션</section>
+      <RetinaSection />
       <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>

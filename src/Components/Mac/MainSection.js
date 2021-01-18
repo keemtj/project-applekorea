@@ -123,7 +123,7 @@ const StHeadline2 = styled.div`
 
 const StContent2 = styled.div`
   margin-top: 3rem;
-  width: 75%;
+  width: 74%;
   color: #a0a0a5;
   font-size: 2.6rem;
   font-weight: 600;
