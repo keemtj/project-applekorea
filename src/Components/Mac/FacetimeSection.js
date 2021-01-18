@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const MikeSection = () => {
+const FacetimeSection = () => {
   return (
     <StSection>
       <StArticle>
@@ -86,4 +86,4 @@ const StFacetime2 = styled.img`
   position: absolute;
   top: 8.8rem;
 `;
-export default MikeSection;
+export default FacetimeSection;

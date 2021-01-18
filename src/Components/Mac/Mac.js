@@ -4,7 +4,7 @@ import MainSection from './MainSection';
 import Grid from '../../Layout/Grid';
 import Article from './Article';
 import RetinaSection from './RetinaSection';
-import MikeSection from './MikeSection';
+import FacetimeSection from './FacetimeSection';
 
 const Mac = () => {
   const mainsectionlist = [
@@ -74,7 +74,7 @@ const Mac = () => {
         <section>섹션2</section>
         <section>섹션3</section>
       </StGrid>
-      <MikeSection />
+      <FacetimeSection />
       <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>
