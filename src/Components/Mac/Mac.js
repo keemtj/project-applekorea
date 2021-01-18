@@ -99,6 +99,7 @@ const Mac = () => {
 const StMain = styled.main`
   width: 100%;
   color: white;
+  overflow: hidden;
 `;
 
 const StGrid = styled(Grid)`
