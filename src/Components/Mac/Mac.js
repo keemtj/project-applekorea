@@ -6,6 +6,7 @@ import Article from './Article';
 import RetinaSection from './RetinaSection';
 import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
+import ConnectivitySection from './ConnectivitySection';
 
 const Mac = () => {
   const mainsectionlist = [
@@ -86,7 +87,7 @@ const Mac = () => {
         <section>섹션2</section>
         <section>섹션3</section>
       </StGrid>
-      <section>연결성 섹션</section>
+      <ConnectivitySection />
       <StGrid>
         <section>섹션1</section>
         <section>섹션2</section>
