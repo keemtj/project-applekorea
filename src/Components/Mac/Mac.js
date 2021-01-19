@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Grid from '../../Layout/Grid';
 import MainSection from './MainSection';
-import Section from './Section';
 import RetinaSection from './RetinaSection';
 import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
 import ConnectivitySection from './ConnectivitySection';
 
-const Mac = ({ main }) => {
-  console.log(main);
+const Mac = () => {
   return (
     <StMain>
       <MainSection />
@@ -21,10 +19,19 @@ const Mac = ({ main }) => {
         rgap={2.5}
         margin={'auto'}
         padding={0.5}
+        style={{ border: '1px solid yellowgreen' }}
       >
-        {main.map((section, i) => (
-          <Section section={section} key={i} />
-        ))}
+        <section>섹션1</section>
+        <section>섹션2</section>
+        <section>섹션3</section>
+        <section>섹션4</section>
+        <section>섹션5</section>
+        <section>섹션6</section>
+        <section>섹션7</section>
+        <section>섹션8</section>
+        <section>섹션9</section>
+        <section>섹션10</section>
+        <section>섹션11</section>
       </Grid>
       <RetinaSection />
       <Grid>
