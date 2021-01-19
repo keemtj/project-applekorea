@@ -7,6 +7,7 @@ import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
 import ConnectivitySection from './ConnectivitySection';
 import Cpu from './Cpu';
+import Gpu from './Gpu';
 
 const Mac = () => {
   return (
@@ -24,7 +25,7 @@ const Mac = () => {
         maxWidth={145}
       >
         <Cpu />
-        <section>섹션2</section>
+        <Gpu />
         <section>섹션3</section>
         <section>섹션4</section>
         <section>섹션5</section>

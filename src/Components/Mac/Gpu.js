@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Cpu = () => {
+const Gpu = () => {
   return (
     <StSection>
       <StHeader>
@@ -9,14 +9,15 @@ const Cpu = () => {
       </StHeader>
       <StContents>
         <StHeadline>
-          <span>8코어 CPU</span>
-          <span>파워 그자체.</span>
+          <span>8코어 GPU</span>
+          <span>아름다움을</span>
+          <span>완성하는 야수성.</span>
         </StHeadline>
         <StParagraph>
-          M1 칩은 MacBook Pro에 엄청나게 빠른 속도와 파워를 선사합니다. 8코어
-          CPU가 이전 세대 대비 최대 2.8 배 더 빨라진 프로세싱 속도를 뽐내며
-          복잡한 워크플로도,막대한 작업량도 거뜬히 처리해내죠.게다가 모든
-          작업에서 놀랄 만큼 탁월한 에너지 효율성을 발휘한답니다.
+          M1에 탑재된 8코어 GPU는 Apple이 제작한 그래픽 프로세서 중 단연코 가장
+          앞선 성능을 자랑합니다. 세상에서 가장 빠른 PC용 통합 그래픽을 제공하는
+          이 칩은 무려 5배나 빨라진 말도 안 되는 스피드의 그래픽 성능을
+          보여주죠.
         </StParagraph>
       </StContents>
       <StButton>
@@ -24,20 +25,30 @@ const Cpu = () => {
           M1이 그래픽 성능을 높여주는 비결 알아보기
         </StModalTrigger>
       </StButton>
-      <StImage src="images/mac_cpu.png" alt="CPU 이미지" />
+      <StKeyword>
+        <span>최대</span>
+        <div>
+          <span>5</span>
+          <span>배</span>
+        </div>
+        <span style={{ lineHeight: '1.5' }}>더 빠른</span>
+        <span style={{ lineHeight: '1.5' }}>그래픽 성능</span>
+      </StKeyword>
+      <StVideo src="videos/mac_gpu.mp4" type="video/mp4" autoPlay={true} />
     </StSection>
   );
 };
 
 const StSection = styled.section`
-  grid-area: 1/1/1/13;
+  grid-area: 2/1/2/13;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
   border: none;
   border-radius: 3rem;
-  background: ${({ theme }) => theme.color.linearGradient};
   overflow: hidden;
+
+  position: relative;
 `;
 
 const StHeader = styled.header`
@@ -65,7 +76,7 @@ const StHeadline = styled.p`
   line-height: 1.2;
 
   & > :first-child {
-    color: ${({ theme }) => theme.color.purple};
+    color: #ca3132;
   }
 `;
 
@@ -94,10 +105,30 @@ const StModalTrigger = styled.button`
   outline: none;
 `;
 
-const StImage = styled.img`
+const StKeyword = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
   width: 55%;
+  height: 100%;
   min-width: 73rem;
-  margin-top: 7.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  & > div {
+    & > :first-child {
+      font-size: 15rem;
+    }
+    & > :last-child {
+      font-size: 9rem;
+    }
+  }
 `;
 
-export default Cpu;
+const StVideo = styled.video`
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+`;
+
+export default Gpu;
