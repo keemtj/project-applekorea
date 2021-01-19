@@ -6,6 +6,7 @@ import RetinaSection from './RetinaSection';
 import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
 import ConnectivitySection from './ConnectivitySection';
+import Cpu from './Cpu';
 
 const Mac = () => {
   return (
@@ -19,9 +20,8 @@ const Mac = () => {
         rgap={2.5}
         margin={'auto'}
         padding={0.5}
-        style={{ border: '1px solid yellowgreen' }}
       >
-        <section>섹션1</section>
+        <Cpu />
         <section>섹션2</section>
         <section>섹션3</section>
         <section>섹션4</section>
