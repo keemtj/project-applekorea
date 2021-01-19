@@ -17,8 +17,8 @@ const Mac = ({ main }) => {
         col={12}
         row={7}
         height={70}
-        cgap={1.5}
-        rgap={1.5}
+        cgap={2.5}
+        rgap={2.5}
         margin={'auto'}
         padding={0.5}
       >
