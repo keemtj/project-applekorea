@@ -27,16 +27,14 @@ const Article = ({ gridArea }) => {
   );
 };
 
-/* <row-start> / <column-start> / <row-end> / <column-end> */
-
 const StArticle = styled.article`
   grid-area: ${({ gridArea }) => gridArea};
+  display: flex;
+  flex-direction: column;
   border: none;
   border-radius: 3rem;
   background: ${({ theme }) => theme.color.linearGradient};
   padding: 4rem 0rem 4rem 4rem;
-  display: flex;
-  flex-direction: column;
 `;
 
 const StHeading = styled.h2`

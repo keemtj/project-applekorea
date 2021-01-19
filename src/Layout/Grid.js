@@ -53,7 +53,7 @@ const StGrid = styled.div`
   );
   grid-column-gap: ${({ cgap }) => `${cgap}rem`};
   grid-row-gap: ${({ rgap }) => `${rgap}rem`};
-  margin: 0rem ${({ margin }) => `${margin}rem`};
+  margin: 0rem ${({ margin }) => (margin === 'auto' ? margin : `${margin}rem`)};
   margin-top: ${({ marginTop }) => `${marginTop}rem`};
   margin-bottom: ${({ marginBottom }) => `${marginBottom}rem`};
   margin-left: ${({ marginLeft }) => `${marginLeft}rem`};
@@ -63,6 +63,8 @@ const StGrid = styled.div`
   padding-bottom: ${({ paddingBottom }) => `${paddingBottom}rem`};
   padding-left: ${({ paddingLeft }) => `${paddingLeft}rem`};
   padding-right: ${({ paddingRight }) => `${paddingRight}rem`};
+
+  max-width: 140rem;
 `;
 
 export default Grid;

@@ -25,13 +25,14 @@ const Mac = () => {
   return (
     <StMain>
       <MainSection />
-      <StGrid
+      <Grid
         col={12}
         row={7}
         height={70}
         cgap={1.5}
         rgap={1.5}
-        style={{ width: '140rem', margin: '0 auto' }}
+        margin={'auto'}
+        padding={0.5}
       >
         {mainsectionlist.map((gridArea, i) => (
           <Article gridArea={gridArea} key={i} />
@@ -69,29 +70,29 @@ const Mac = () => {
         <section style={{ gridArea: '7/9/7/13', border: '1px solid green' }}>
           섹션11
         </section> */}
-      </StGrid>
+      </Grid>
       <RetinaSection />
-      <StGrid>
+      <Grid>
         <section>섹션1</section>
         <section>섹션2</section>
         <section>섹션3</section>
-      </StGrid>
+      </Grid>
       <FacetimeSection />
-      <StGrid>
+      <Grid>
         <section>섹션1</section>
         <section>섹션2</section>
-      </StGrid>
+      </Grid>
       <KeyboardSection />
-      <StGrid>
+      <Grid>
         <section>섹션1</section>
         <section>섹션2</section>
         <section>섹션3</section>
-      </StGrid>
+      </Grid>
       <ConnectivitySection />
-      <StGrid>
+      <Grid>
         <section>섹션1</section>
         <section>섹션2</section>
-      </StGrid>
+      </Grid>
     </StMain>
   );
 };
@@ -100,11 +101,6 @@ const StMain = styled.main`
   width: 100%;
   color: white;
   overflow: hidden;
-`;
-
-const StGrid = styled(Grid)`
-  width: 140rem;
-  margin: 0 auto;
 `;
 
 export default Mac;
