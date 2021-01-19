@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Grid from '../../Layout/Grid';
 import MainSection from './MainSection';
-import Article from './Article';
+import Section from './Section';
 import RetinaSection from './RetinaSection';
 import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
@@ -23,7 +23,7 @@ const Mac = ({ main }) => {
         padding={0.5}
       >
         {main.map((section, i) => (
-          <Article section={section} key={i} />
+          <Section section={section} key={i} />
         ))}
       </Grid>
       <RetinaSection />

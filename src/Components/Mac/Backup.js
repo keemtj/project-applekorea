@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const Article = ({ section }) => {
+const Section = ({ section }) => {
   const {
     headingText,
     headline,
@@ -11,11 +11,12 @@ const Article = ({ section }) => {
     image,
     video,
     gridArea,
+    reverse,
   } = section;
   console.log('headline', headline);
   console.log('keyword', keyword);
   return (
-    <StArticle gridArea={gridArea} video={video}>
+    <StSection gridArea={gridArea} video={video}>
       {video && (
         <StVideoWrapper>
           <StVideo src={`videos/${video}`} typeof="video/mp4" autoPlay={true} />
@@ -35,16 +36,16 @@ const Article = ({ section }) => {
           {modalText && <StButton>{modalText}</StButton>}
         </div>
         {image && (
-          <StImageWrapper>
-            <StImage src={`images/${image}`} alt="" />
+          <StImageWrapper reverse={reverse}>
+            <StImage src={`images/${image}`} alt={`${headingText} 이미지`} />
           </StImageWrapper>
         )}
       </StWrapper>
-    </StArticle>
+    </StSection>
   );
 };
 
-const StArticle = styled.article`
+const StSection = styled.section`
   grid-area: ${({ gridArea }) => gridArea};
   display: flex;
   flex-direction: column;
@@ -116,13 +117,27 @@ const StImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  ${({ reverse }) =>
+    reverse &&
+    css`
+      order: -1;
+    `}
 `;
 
 const StImage = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: left;
+  ${({ reverse }) =>
+    reverse
+      ? css`
+          order: -1;
+          object-fit: cover;
+          object-position: right;
+        `
+      : css`
+          object-fit: cover;
+          object-position: left;
+        `}
 `;
 
 const StVideoWrapper = styled.div`
@@ -136,4 +151,4 @@ const StVideo = styled.video`
   width: 110%;
 `;
 
-export default Article;
+export default Section;

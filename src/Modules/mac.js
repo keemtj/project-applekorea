@@ -35,6 +35,7 @@ const initialState = {
       modalText: 'M1이 ML 성능을 높여주는 비결 알아보기',
       image: 'mac_ml.png',
       gridArea: '3/1/3/13',
+      reverse: true,
     },
     {
       headingText: 'macOS Big Sur',
