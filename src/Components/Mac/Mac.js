@@ -19,7 +19,9 @@ const Mac = () => {
         cgap={2.5}
         rgap={2.5}
         margin={'auto'}
-        padding={0.5}
+        padding={2.5}
+        width={100}
+        maxWidth={145}
       >
         <Cpu />
         <section>섹션2</section>

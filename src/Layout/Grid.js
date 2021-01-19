@@ -17,6 +17,8 @@ const Grid = ({
   paddingBottom,
   paddingLeft,
   paddingRight,
+  width,
+  maxWidth,
   style,
   children,
 }) => {
@@ -37,6 +39,8 @@ const Grid = ({
       paddingBottom={paddingBottom}
       paddingLeft={paddingLeft}
       paddingRight={paddingRight}
+      width={width}
+      maxWidth={maxWidth}
       style={style}
     >
       {children}
@@ -64,7 +68,8 @@ const StGrid = styled.div`
   padding-left: ${({ paddingLeft }) => `${paddingLeft}rem`};
   padding-right: ${({ paddingRight }) => `${paddingRight}rem`};
 
-  max-width: 140rem;
+  width: ${({ width }) => `${width}%`};
+  max-width: ${({ maxWidth }) => `${maxWidth}rem`};
 `;
 
 export default Grid;
