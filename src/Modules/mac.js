@@ -14,6 +14,7 @@ const initialState = {
         'M1 칩은 MacBook Pro에 엄청나게 빠른 속도와 파워를 선사합니다. 8코어 CPU가 이전 세대 대비 최대 2.8 배 더 빨라진 프로세싱 속도를 뽐내며 복잡한 워크플로도,막대한 작업량도 거뜬히 처리해내죠.게다가 모든 작업에서 놀랄 만큼 탁월한 에너지 효율성을 발휘한답니다.',
       modalText: 'M1이 엄청난 속도를 내는 비결 알아보기',
       asset: 'mac_cpu.png',
+      gridArea: '1/1/1/13',
     },
     {
       headingText: 'GPU',
@@ -23,6 +24,7 @@ const initialState = {
       keyword: '최대 5배 더 빠른 그래픽 성능',
       modalText: 'M1이 그래픽 성능을 높여주는 비결 알아보기',
       asset: 'mac_gpu.mp4',
+      gridArea: '2/1/2/13',
     },
     {
       headingText: '머신 러닝',
@@ -32,6 +34,7 @@ const initialState = {
       keyword: ['16코어 Neural Engine', '최대 11배 더 빠른 ML 성능'],
       modalText: 'M1이 ML 성능을 높여주는 비결 알아보기',
       asset: 'mac_ml.png',
+      gridArea: '3/1/3/13',
     },
     {
       headingText: 'macOS Big Sur',
@@ -39,27 +42,32 @@ const initialState = {
       paragraph:
         'M1 칩의 잠재력을 끌어내도록 개발된 macOS Big Sur가 Mac에 대대적인 성능 향상을 비롯한 다양한 혜택을 선사합니다. 강력하게 업데이트된 앱, 아름다운 새 디자인, 업계를 선도하는 개인 정보 보호 기능과 동급 최고의 보안성까지. Apple의 최첨단 하드웨어에서 실행되는 최강의 소프트웨어죠.',
       asset: 'mac_bigsur.png',
+      gridArea: '4/1/4/13',
     },
     {
       headingText: '속도 및 반응성',
       paragraph:
         'M1 칩과 macOS Big Sur가 만나 시스템 전체가 더욱 빠릿빠릿하게 돌아갑니다. MacBook Pro를 잠에서 깨우면 즉시 깨어나고, 사진을 넘겨보거나 Safari에서 웹서핑을 하는 등 일상적인 작업도 더욱 빠르게 실행되죠. 물론 가장 사용량이 많은 앱들도 이 강력한 파워에 힘입어 아주 매끄럽게 구동된답니다.',
       keyword: ['켜는 즉시 강력하고 빠릿하게.'],
+      gridArea: '5/1/5/7',
     },
     {
       headingText: '사상 최대의 앱 컬렉션',
       paragraph:
         'M1 기반으로 제작된 강력한 앱을 실행해보세요. Rosetta 2 덕분에 기존의 앱도 모두 구동할 수 있습니다. 게다가 이제부터는 즐겨 사용하는 iPhone과 iPad 앱까지 macOS Big Sur에서 그대로 사용 가능합니다. 사상 최대의 앱 컬렉션을 이렇게 Mac에서 전부 만나볼 수 있게 된 거죠.',
       asset: 'mac_app_collection.png',
+      gridArea: '5/7/5/13',
     },
     {
       headingText: '열 효율',
       headline: ['액티브 쿨링으로 빠른 처리 속도를 유지합니다.'],
       asset: 'mac_cooling.mp4',
+      gridArea: '6/1/6/5',
     },
     {
       headingText: '한나절은 너끈한 배터리 성능',
       headline: ['Mac 사상 가장 긴 최대 20시간의 배터리 사용 시간.'],
+      gridArea: '6/5/6/13',
     },
     {
       headingText: '통합 메모리',
@@ -67,16 +75,19 @@ const initialState = {
       paragraph:
         'M1 칩은 최대 16GB의 초고속 통합 메모리를 탑재하고 있습니다. 고대역폭과 저지연성을 자랑하는 이 통합 메모리는 CPU, GPU 그리고 Neural Engine 간 데이터를 효율적으로 공유할 수 있게 해줍니다. 덕분에 당신이 하는 모든 일을 더욱 빠르게 막힘없이 처리할 수 있죠.',
       asset: ['mac_memory.jpg', 'mac_memory_icon.png'],
+      gridArea: '7/1/7/5',
     },
     {
       headingText: 'SSD 저장 장치',
       keyword: ['최대 2TB SSD 저장 장치', '최대 3.3GB/s 순차 읽기 속도'],
+      gridArea: '7/5/7/9',
     },
     {
       headingText: '보안',
       keyword: ['MacBook Pro. 개인정보는 철저하게.'],
       modalText: 'M1이 개인 정보를 보호하는 비결 알아보기',
       asset: 'mac_security.png',
+      gridArea: '7/9/7/13',
     },
   ],
   retina: [
