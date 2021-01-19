@@ -1,27 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Article = ({ gridArea }) => {
+const Article = ({ section }) => {
+  const {
+    headingText,
+    headline,
+    paragraph,
+    keyword,
+    modalText,
+    image,
+    video,
+    gridArea,
+  } = section;
+  console.log('headline', headline);
+  console.log('keyword', keyword);
   return (
-    <StArticle gridArea={gridArea}>
-      <StHeading>CPU</StHeading>
+    <StArticle gridArea={gridArea} video={video}>
+      {video && (
+        <StVideoWrapper>
+          <StVideo src={`videos/${video}`} typeof="video/mp4" autoPlay={true} />
+        </StVideoWrapper>
+      )}
+      <StHeading>{headingText}</StHeading>
       <StWrapper>
         <div>
-          <StHeadline>
-            <span>8코어 CPU</span>
-            <span>파워 그 자체.</span>
-          </StHeadline>
-          <StParagraph>
-            M1 칩은 MacBook Pro에 엄청나게 빠른 속도와 파워를 선사합니다. 8코어
-            CPU가 이전 세대 대비 최대 2.8배 더 빨라진 프로세싱 속도를 뽐내며
-            복잡한 워크플로도, 막대한 작업량도 거뜬히 처리해내죠. 게다가 모든
-            작업에서 놀랄 만큼 탁월한 에너지 효율성을 발휘한답니다.
-          </StParagraph>
-          <StButton>M1이 엄청난 속도를 내는 비결 알아보기</StButton>
+          {headline && (
+            <StHeadline>
+              <span>{headline?.[0]}</span>
+              <span>{headline?.[1]}</span>
+            </StHeadline>
+          )}
+          {paragraph && <StParagraph>{paragraph}</StParagraph>}
+          {keyword && <StKeyword>{keyword}</StKeyword>}
+          {modalText && <StButton>{modalText}</StButton>}
         </div>
-        <StImageWrapper>
-          <StImage src="images/mac_cpu.png" alt="" />
-        </StImageWrapper>
+        {image && (
+          <StImageWrapper>
+            <StImage src={`images/${image}`} alt="" />
+          </StImageWrapper>
+        )}
       </StWrapper>
     </StArticle>
   );
@@ -33,8 +50,10 @@ const StArticle = styled.article`
   flex-direction: column;
   border: none;
   border-radius: 3rem;
-  background: ${({ theme }) => theme.color.linearGradient};
+  background: ${({ video, theme }) => !video && theme.color.linearGradient};
   padding: 4rem 0rem 4rem 4rem;
+  overflow: hidden;
+  position: relative;
 `;
 
 const StHeading = styled.h2`
@@ -78,6 +97,8 @@ const StParagraph = styled.p`
   word-break: keep-all;
 `;
 
+const StKeyword = styled.div``;
+
 const StButton = styled.button`
   /* visibility: hidden; */
   margin-top: 9rem;
@@ -102,6 +123,17 @@ const StImage = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: left;
+`;
+
+const StVideoWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+`;
+
+const StVideo = styled.video`
+  width: 110%;
 `;
 
 export default Article;
