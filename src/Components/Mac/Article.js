@@ -20,7 +20,7 @@ const Article = ({ gridArea }) => {
           <StButton>M1이 엄청난 속도를 내는 비결 알아보기</StButton>
         </div>
         <StImageWrapper>
-          <StImage src="images/image2.png" alt="" />
+          <StImage src="images/mac_cpu.png" alt="" />
         </StImageWrapper>
       </StWrapper>
     </StArticle>
