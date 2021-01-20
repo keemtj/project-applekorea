@@ -11,12 +11,10 @@ const MachineLearning = () => {
         <StContents>
           <StParagraph>
             <span>16코어 Neural Engine. 스마트함과 스피드의 만남.</span>
-            <span>
-              머신 러닝(ML)은 동영상 분석, 음성 인식, 이미지 프로세싱 등 다양한
-              작업에 어마어마한 처리 속도와 자동화 기능을 더해줍니다. 16코어
-              Neural Engine 및 관련 기술이 총망라된 M1 칩이 MacBook Pro의 ML
-              성능을 최고 수준으로 끌어올리죠.
-            </span>
+            머신 러닝(ML)은 동영상 분석, 음성 인식, 이미지 프로세싱 등 다양한
+            작업에 어마어마한 처리 속도와 자동화 기능을 더해줍니다. 16코어
+            Neural Engine 및 관련 기술이 총망라된 M1 칩이 MacBook Pro의 ML
+            성능을 최고 수준으로 끌어올리죠.
           </StParagraph>
           <StKeywordWrapper>
             <StKeyword>
@@ -81,17 +79,16 @@ const StContents = styled.div`
 `;
 
 const StParagraph = styled.p`
-  display: flex;
-  flex-flow: column nowrap;
   margin-top: 6rem;
   padding-right: 4.5rem;
+  padding-left: 1rem;
   width: 100%;
   color: #a0a0a5;
   font-size: 2.6rem;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.3;
   word-break: keep-all;
-  & :first-child {
+  & > span {
     color: white;
   }
 `;
@@ -101,13 +98,11 @@ const StKeywordWrapper = styled.div`
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: flex-end;
-  margin-top: -3rem;
-  padding-right: 4.5rem;
   width: 100%;
 `;
 
 const StKeyword = styled.div`
-  padding-right: 4.5rem;
+  width: 100%;
   text-align: center;
   font-size: 2.5rem;
   font-weight: 600;
@@ -117,7 +112,7 @@ const StKeyword = styled.div`
   }
   & > div {
     & > :first-child {
-      font-size: 9rem;
+      font-size: 10rem;
     }
     & > :last-child {
       font-size: 6rem;
@@ -127,7 +122,7 @@ const StKeyword = styled.div`
 `;
 
 const StButton = styled.div`
-  padding: 0rem 0rem 4.5rem 0rem;
+  padding: 0rem 0rem 4.5rem 1rem;
 `;
 
 const StModalTrigger = styled.button`
@@ -145,8 +140,7 @@ const StModalTrigger = styled.button`
 const StImage = styled.img`
   width: 100%;
   max-width: 50%;
-  object-fit: cover;
-  object-position: -6rem;
+  object-fit: scale-down;
   margin-top: 3rem;
   padding-bottom: 3rem;
 `;

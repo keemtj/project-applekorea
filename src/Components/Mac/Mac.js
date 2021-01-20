@@ -9,6 +9,7 @@ import ConnectivitySection from './ConnectivitySection';
 import Cpu from './Cpu';
 import Gpu from './Gpu';
 import MachineLearning from './MachineLearning';
+import Bigsur from './Bigsur';
 
 const Mac = () => {
   return (
@@ -28,7 +29,7 @@ const Mac = () => {
         <Cpu />
         <Gpu />
         <MachineLearning />
-        <section>섹션4</section>
+        <Bigsur />
         <section>섹션5</section>
         <section>섹션6</section>
         <section>섹션7</section>

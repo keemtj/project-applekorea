@@ -5,7 +5,7 @@ const Gpu = () => {
   return (
     <StSection>
       <StHeader>
-        <h3>CPU</h3>
+        <h3>GPU</h3>
       </StHeader>
       <StContents>
         <StHeadline>
@@ -112,7 +112,6 @@ const StKeyword = styled.div`
   justify-content: center;
   width: 55%;
   height: 100%;
-  min-width: 73rem;
   font-size: 2.5rem;
   font-weight: 600;
   & > div {
@@ -128,7 +127,7 @@ const StKeyword = styled.div`
 const StVideo = styled.video`
   position: absolute;
   z-index: -1;
-  width: 100%;
+  height: 70rem;
 `;
 
 export default Gpu;
