@@ -20,7 +20,7 @@ const Cpu = () => {
         </StParagraph>
       </StContents>
       <StButton>
-        <StModalTrigger style={{ color: 'white' }}>
+        <StModalTrigger>
           M1이 그래픽 성능을 높여주는 비결 알아보기
         </StModalTrigger>
       </StButton>

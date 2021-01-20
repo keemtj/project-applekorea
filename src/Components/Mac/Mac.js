@@ -8,6 +8,7 @@ import KeyboardSection from './KeyboardSection';
 import ConnectivitySection from './ConnectivitySection';
 import Cpu from './Cpu';
 import Gpu from './Gpu';
+import MachineLearning from './MachineLearning';
 
 const Mac = () => {
   return (
@@ -26,7 +27,7 @@ const Mac = () => {
       >
         <Cpu />
         <Gpu />
-        <section>섹션3</section>
+        <MachineLearning />
         <section>섹션4</section>
         <section>섹션5</section>
         <section>섹션6</section>
