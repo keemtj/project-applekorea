@@ -30,7 +30,7 @@ const StSection = styled.section`
   border: none;
   border-radius: 3rem;
   background: center / cover url(images/mac_app_collection_bg.jpg) no-repeat;
-  /* overflow: hidden; */
+  overflow: hidden;
 `;
 
 const StHeader = styled.header`
