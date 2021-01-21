@@ -57,11 +57,12 @@ const StHeadline = styled.p`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
-  font-size: 7rem;
-  font-weight: bolder;
+  padding-bottom: 6rem;
+  font-size: 8rem;
+  font-weight: 800;
   line-height: 1.2;
   & :nth-child(2) {
     text-indent: -2rem;
