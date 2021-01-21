@@ -10,6 +10,7 @@ import Cpu from './Cpu';
 import Gpu from './Gpu';
 import MachineLearning from './MachineLearning';
 import Bigsur from './Bigsur';
+import Speed from './Speed';
 
 const Mac = () => {
   return (
@@ -30,7 +31,7 @@ const Mac = () => {
         <Gpu />
         <MachineLearning />
         <Bigsur />
-        <section>섹션5</section>
+        <Speed />
         <section>섹션6</section>
         <section>섹션7</section>
         <section>섹션8</section>
