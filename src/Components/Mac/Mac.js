@@ -13,6 +13,7 @@ import Bigsur from './Bigsur';
 import Speed from './Speed';
 import AppCollection from './AppCollection';
 import Cooling from './Cooling';
+import Battery from './Battery';
 
 const Mac = () => {
   return (
@@ -36,7 +37,7 @@ const Mac = () => {
         <Speed />
         <AppCollection />
         <Cooling />
-        <section>섹션8</section>
+        <Battery />
         <section>섹션9</section>
         <section>섹션10</section>
         <section>섹션11</section>
