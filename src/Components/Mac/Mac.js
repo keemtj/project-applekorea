@@ -14,7 +14,9 @@ import Speed from './Speed';
 import AppCollection from './AppCollection';
 import Cooling from './Cooling';
 import Battery from './Battery';
-
+import Memory from './Memory';
+import Ssd from './Ssd';
+import Security from './Security';
 const Mac = () => {
   return (
     <StMain>
@@ -38,9 +40,9 @@ const Mac = () => {
         <AppCollection />
         <Cooling />
         <Battery />
-        <section>섹션9</section>
-        <section>섹션10</section>
-        <section>섹션11</section>
+        <Memory />
+        <Ssd />
+        <Security />
       </Grid>
       <RetinaSection />
       <Grid>
