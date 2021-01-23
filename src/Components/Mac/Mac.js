@@ -17,6 +17,9 @@ import Battery from './Battery';
 import Memory from './Memory';
 import Ssd from './Ssd';
 import Security from './Security';
+import Lightness from './Lightness';
+import Colors from './Colors';
+import TrueTone from './TrueTone';
 const Mac = () => {
   return (
     <StMain>
@@ -45,10 +48,20 @@ const Mac = () => {
         <Security />
       </Grid>
       <RetinaSection />
-      <Grid>
-        <section>섹션1</section>
-        <section>섹션2</section>
-        <section>섹션3</section>
+      <Grid
+        col={12}
+        row={1}
+        height={70}
+        cgap={2.5}
+        rgap={2.5}
+        margin={'auto'}
+        padding={2.5}
+        width={100}
+        maxWidth={145}
+      >
+        <Lightness />
+        <Colors />
+        <TrueTone />
       </Grid>
       <FacetimeSection />
       <Grid>
