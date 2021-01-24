@@ -17,9 +17,10 @@ import Battery from './Battery';
 import Memory from './Memory';
 import Ssd from './Ssd';
 import Security from './Security';
-import Lightness from './Lightness';
+import Backlight from './Backlight';
 import Colors from './Colors';
 import TrueTone from './TrueTone';
+
 const Mac = () => {
   return (
     <StMain>
@@ -59,7 +60,7 @@ const Mac = () => {
         width={100}
         maxWidth={145}
       >
-        <Lightness />
+        <Backlight />
         <Colors />
         <TrueTone />
       </Grid>
