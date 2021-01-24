@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AppCollection = () => {
+const FaceTime = () => {
   return (
     <StSection>
       <StHeader>
@@ -72,4 +72,4 @@ const StImage = styled.img`
   width: 100%;
 `;
 
-export default AppCollection;
+export default FaceTime;

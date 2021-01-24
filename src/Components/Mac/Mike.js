@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const AppCollection = () => {
+const Mike = () => {
   return (
     <StSection>
       <StHeader>
@@ -75,4 +75,4 @@ const StVideo = styled.video`
   object-fit: scale-down;
 `;
 
-export default AppCollection;
+export default Mike;
