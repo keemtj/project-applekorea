@@ -56,6 +56,7 @@ const Mac = () => {
         cgap={2.5}
         rgap={2.5}
         margin={'auto'}
+        marginTop={6.5}
         padding={2.5}
         width={100}
         maxWidth={145}

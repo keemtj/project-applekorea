@@ -9,7 +9,7 @@ const Backlight = () => {
       </StHeader>
       <StContentsWrapper>
         <StContents>
-          <StImage src="images/mac_backlight.png" alt="니트 밝기" />
+          <StImage src="images/mac_backlight.png" alt="니트 밝기 아이콘" />
           <StKeyword>
             <span>500</span>
             <span>니트 밝기</span>
@@ -26,7 +26,7 @@ const StSection = styled.section`
   flex-flow: column nowrap;
   border: none;
   border-radius: 3rem;
-  background: linear-gradient(to right bottom, #1f224b 0%, #2d5d85 100%);
+  background: #151516;
   overflow: hidden;
 `;
 
@@ -53,7 +53,7 @@ const StContents = styled.div`
 
 const StImage = styled.img`
   width: 100%;
-  padding: 4.5rem;
+  padding: 9rem;
 `;
 
 const StKeyword = styled.p`
