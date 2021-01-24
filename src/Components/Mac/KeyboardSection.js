@@ -77,6 +77,7 @@ const StKeyboard = styled.img`
   margin-top: 6rem;
   width: 100%;
   max-width: 120rem;
+  z-index: -1;
 `;
 
 export default KeyboardSection;

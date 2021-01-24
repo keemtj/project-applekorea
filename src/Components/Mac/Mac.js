@@ -22,6 +22,9 @@ import Colors from './Colors';
 import TrueTone from './TrueTone';
 import FaceTime from './FaceTime';
 import Mike from './Mike';
+import Scissor from './Scissor';
+import TouchBar from './TouchBar';
+import TouchId from './TouchId';
 
 const Mac = () => {
   return (
@@ -83,10 +86,21 @@ const Mac = () => {
         <Mike />
       </Grid>
       <KeyboardSection />
-      <Grid>
-        <section>섹션1</section>
-        <section>섹션2</section>
-        <section>섹션3</section>
+      <Grid
+        col={12}
+        row={1}
+        height={70}
+        cgap={2.5}
+        rgap={2.5}
+        margin={'auto'}
+        marginTop={-6}
+        padding={2.5}
+        width={100}
+        maxWidth={145}
+      >
+        <Scissor />
+        <TouchBar />
+        <TouchId />
       </Grid>
       <ConnectivitySection />
       <Grid>
