@@ -7,32 +7,38 @@ import { LogoApple } from '@styled-icons/ionicons-solid/LogoApple';
 const SectionWatch = () => {
   return (
     <StSection>
-      <StWrapper>
-        <h2>
-          <StLogoApple />
-          Watch
-        </h2>
-        <p>SERIES 6</p>
-        <div>건강의 미래, 이미 손목 위에.</div>
-      </StWrapper>
-      <StMoreInfo>
-        <StList>
-          <StLink to="/project-applekorea/mac">더 알아보기</StLink>
+      <Link to="/project-applekorea/watch">
+        <StHeadline>
+          <h2>
+            <StLogoApple />
+            Watch
+          </h2>
+          <p>
+            <span>SERIES 6</span>
+            <span>건강의 미래, 이미 손목 위에.</span>
+          </p>
+        </StHeadline>
+      </Link>
+      <StContents>
+        <StLink to="/project-applekorea/watch">
+          <span>더 알아보기</span>
           <StChevronRight />
-        </StList>
-        <StList>
-          <StLink to="/project-applekorea/mac">구입하기</StLink>
+        </StLink>
+        <StLink to="/project-applekorea/watch">
+          <span>구매하기</span>
           <StChevronRight />
-        </StList>
-      </StMoreInfo>
-      <Link to="/project-applekorea/mac">
-        <StImage src="images/home_watch_6.jpg" alt="에어팟 맥스" />
+        </StLink>
+      </StContents>
+      <Link to="/project-applekorea/watch">
+        <StBackgroundImage
+          src="images/home_watch_6.jpg"
+          alt="애플 워치 이미지"
+        />
       </Link>
     </StSection>
   );
 };
 
-/* <row-start> / <column-start> / <row-end> / <column-end> */
 const StSection = styled.section`
   grid-area: 1 / 1 / 1 / 1;
   background-color: black;
@@ -41,20 +47,16 @@ const StSection = styled.section`
   overflow: hidden;
 `;
 
-const StWrapper = styled.div`
+const StHeadline = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 35%;
+  color: white;
 
   position: absolute;
-  z-index: 2;
-  top: 5rem;
-  left: calc(50% - 20rem);
-  right: 50%;
-
-  width: 40rem;
-  color: white;
 
   & > h2 {
     display: flex;
@@ -65,16 +67,22 @@ const StWrapper = styled.div`
     font-weight: 500;
     text-transform: uppercase;
   }
-  & > div {
-    margin-top: 1.5rem;
-    font-size: 2rem;
-    font-weight: 400;
-  }
   & > p {
-    margin-top: 1rem;
-    color: #bf4903;
-    font-size: 1.4rem;
-    font-weight: 400;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    & > :first-child {
+      margin-top: 1rem;
+      color: #bf4903;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    & > :last-child {
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      font-weight: 400;
+    }
   }
 `;
 
@@ -82,15 +90,14 @@ const StLogoApple = styled(LogoApple)`
   width: 3rem;
 `;
 
-const StMoreInfo = styled.ul`
+const StContents = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   position: absolute;
-  z-index: 2;
-  top: 26%;
+  top: 28%;
   left: calc(50% - 9.5rem);
 
   width: fit-content;
@@ -100,11 +107,8 @@ const StMoreInfo = styled.ul`
   font-size: 1.6rem;
 `;
 
-const StList = styled.li`
-  display: flex;
-`;
-
 const StLink = styled(Link)`
+  display: flex;
   color: #0266cc;
   text-decoration: none;
   &:hover {
@@ -118,13 +122,14 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StImage = styled.img`
-  position: absolute;
-  z-index: 1;
-  left: calc(50% - 13rem);
-  right: 50%;
-  bottom: 0;
+const StBackgroundImage = styled.img`
   height: 65%;
+  width: 100%;
+  object-fit: contain;
+  object-position: 50% 100%;
+
+  position: absolute;
+  bottom: 0;
 `;
 
 export default SectionWatch;

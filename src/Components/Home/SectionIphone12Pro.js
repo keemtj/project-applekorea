@@ -6,91 +6,91 @@ import { ChevronRight } from '@styled-icons/entypo/ChevronRight';
 const SectionIphone12Pro = () => {
   return (
     <StSection>
-      <StWrapper>
-        <h2>iPhone 12 Pro</h2>
-        <div>도약의 시간.</div>
-        <p>가격은 ₩1,350,000부터(보상 판매* 미적용)</p>
-      </StWrapper>
-      <StMoreInfo>
-        <StList>
-          <StLink to="/project-applekorea/mac">더 알아보기</StLink>
+      <Link to="/project-applekorea/iphone">
+        <StHeadline>
+          <h2>iPhone 12 Pro</h2>
+          <p>
+            <span>도약의 시간.</span>
+            <span>가격은 ₩1,350,000부터(보상 판매* 미적용)</span>
+          </p>
+        </StHeadline>
+      </Link>
+      <StContents>
+        <StLink to="/project-applekorea/iphone">
+          <span>더 알아보기</span>
           <StChevronRight />
-        </StList>
-        <StList>
-          <StLink to="/project-applekorea/mac">구입하기</StLink>
+        </StLink>
+        <StLink to="/project-applekorea/iphone">
+          <span>구매하기</span>
           <StChevronRight />
-        </StList>
-      </StMoreInfo>
-      <Link to="/project-applekorea/mac">
-        <StImage src="images/home_iphone_12pro.jpg" alt="에어팟 맥스" />
+        </StLink>
+      </StContents>
+      <Link to="/project-applekorea/iphone">
+        <StBackgroundImage
+          src="images/home_iphone_12pro.jpg"
+          alt="아이폰12 프로 이미지"
+        />
       </Link>
     </StSection>
   );
 };
 
-/* <row-start> / <column-start> / <row-end> / <column-end> */
 const StSection = styled.section`
-  grid-area: 3 / 1 / 3 / 1;
+  grid-area: 3/1/3/1;
   width: 100%;
   position: relative;
   overflow: hidden;
 `;
 
-const StWrapper = styled.div`
+const StHeadline = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40rem;
 
   position: absolute;
   z-index: 2;
-  top: 7rem;
+  top: 10%;
   left: calc(50% - 20rem);
-  right: 50%;
-
-  width: 40rem;
-  color: #ffffff;
+  color: white;
 
   & > h2 {
     font-size: 5.5rem;
     font-weight: 500;
   }
-  & > div {
-    margin-top: 2rem;
-    font-size: 2.5rem;
-    font-weight: 400;
-  }
   & > p {
-    margin-top: 2.5rem;
-    color: #86868b;
-    font-size: 1.6rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
     font-weight: 400;
+    & > :first-child {
+      margin-top: 2rem;
+      font-size: 2.5rem;
+    }
+    & > :last-child {
+      margin-top: 2rem;
+      color: #86868b;
+      font-size: 1.6rem;
+    }
   }
 `;
 
-const StMoreInfo = styled.ul`
+const StContents = styled.div`
+  width: 22rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-size: 2rem;
 
   position: absolute;
-  z-index: 2;
-  top: 35%;
+  top: 34%;
   left: calc(50% - 11rem);
-
-  width: fit-content;
-  & > :last-child {
-    margin-left: 3rem;
-  }
-  font-size: 2rem;
-`;
-
-const StList = styled.li`
-  display: flex;
 `;
 
 const StLink = styled(Link)`
+  display: flex;
   color: #0266cc;
   text-decoration: none;
   &:hover {
@@ -104,12 +104,11 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StImage = styled.img`
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: -50%;
+const StBackgroundImage = styled.img`
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 `;
 
 export default SectionIphone12Pro;

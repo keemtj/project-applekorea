@@ -6,37 +6,41 @@ import { ChevronRight } from '@styled-icons/entypo/ChevronRight';
 const SectionMacBookPro = () => {
   return (
     <StSection>
-      <StWrapper>
-        <h2>MacBook Pro</h2>
-        <div>프로 중의 프로.</div>
-        <p>13형 모델</p>
-      </StWrapper>
-      <StMoreInfo>
-        <StList>
-          <StLink to="/project-applekorea/mac">더 알아보기</StLink>
-          <StChevronRight />
-        </StList>
-        <StList>
-          <StLink to="/project-applekorea/mac">구입하기</StLink>
-          <StChevronRight />
-        </StList>
-      </StMoreInfo>
       <Link to="/project-applekorea/mac">
-        <StImage src="images/home_macbook_pro_13.jpg" alt="맥북 프로 13형" />
+        <StHeadline>
+          <h2>MacBook Pro</h2>
+          <div>프로 중의 프로.</div>
+          <p>13형 모델</p>
+        </StHeadline>
+      </Link>
+      <StContents>
+        <StLink to="/project-applekorea/mac">
+          <span>더 알아보기</span>
+          <StChevronRight />
+        </StLink>
+        <StLink to="/project-applekorea/mac">
+          <span>구매하기</span>
+          <StChevronRight />
+        </StLink>
+      </StContents>
+      <Link to="/project-applekorea/mac">
+        <StBackgroundImage
+          src="images/home_macbook_pro_13.jpg"
+          alt="맥북 프로 13형 이미지"
+        />
       </Link>
     </StSection>
   );
 };
 
-/* <row-start> / <column-start> / <row-end> / <column-end> */
 const StSection = styled.section`
-  grid-area: 3 / 2 / 3 / 2;
+  grid-area: 3/2/3/2;
   width: 100%;
   position: relative;
   overflow: hidden;
 `;
 
-const StWrapper = styled.div`
+const StHeadline = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,14 +71,13 @@ const StWrapper = styled.div`
   }
 `;
 
-const StMoreInfo = styled.ul`
+const StContents = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   position: absolute;
-  z-index: 2;
   top: 25%;
   left: calc(50% - 9.5rem);
 
@@ -85,11 +88,8 @@ const StMoreInfo = styled.ul`
   font-size: 1.6rem;
 `;
 
-const StList = styled.li`
-  display: flex;
-`;
-
 const StLink = styled(Link)`
+  display: flex;
   color: #0266cc;
   text-decoration: none;
   &:hover {
@@ -103,12 +103,11 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StImage = styled.img`
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: -28.5%;
+const StBackgroundImage = styled.img`
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 `;
 
 export default SectionMacBookPro;

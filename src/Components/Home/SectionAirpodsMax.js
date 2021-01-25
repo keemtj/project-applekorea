@@ -6,54 +6,47 @@ import { ChevronRight } from '@styled-icons/entypo/ChevronRight';
 const SectionAirpodsMax = () => {
   return (
     <StSection>
-      <StMoreInfo>
-        <StList>
-          <StLink to="/project-applekorea/mac">더 알아보기</StLink>
+      <StContents>
+        <StLink to="/project-applekorea/music">
+          <span>더 알아보기</span>
           <StChevronRight />
-        </StList>
-        <StList>
-          <StLink to="/project-applekorea/mac">구입하기</StLink>
+        </StLink>
+        <StLink to="/project-applekorea/music">
+          <span>구매하기</span>
           <StChevronRight />
-        </StList>
-      </StMoreInfo>
-      <Link to="/project-applekorea/mac">
-        {/* <StBackgroundImage /> */}
-        <StImage src="images/home_airpods_max.jpg" alt="에어팟 맥스" />
+        </StLink>
+      </StContents>
+      <Link to="/project-applekorea/music">
+        <StBackgroundImage
+          src="images/home_airpods_max.jpg"
+          alt="에어팟 맥스 이미지"
+        />
       </Link>
     </StSection>
   );
 };
 
 const StSection = styled.section`
-  grid-area: 1 / 1 / 1 / 1;
+  grid-area: 1/1/1/1;
   width: 100%;
-  position: relative;
   overflow: hidden;
+  position: relative;
 `;
 
-const StMoreInfo = styled.ul`
+const StContents = styled.div`
+  width: 22rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-size: 2rem;
 
   position: absolute;
-  z-index: 2;
-  bottom: 5rem;
+  top: 90%;
   left: calc(50% - 11rem);
-
-  width: fit-content;
-  & > :last-child {
-    margin-left: 3rem;
-  }
-  font-size: 2rem;
-`;
-
-const StList = styled.li`
-  display: flex;
 `;
 
 const StLink = styled(Link)`
+  display: flex;
   color: #0266cc;
   text-decoration: none;
   &:hover {
@@ -67,20 +60,11 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StImage = styled.img`
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: -50%;
+const StBackgroundImage = styled.img`
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 `;
-
-// const StBackgroundImage = styled.div`
-//   background-image: url(${process.env.PUBLIC_URL} + 'project-applekorea/images/home_airpods_max.jpg');
-//   background-repeat: no-repeat;
-//   background-size: 210%;
-//   background-position: center;
-//   height: 100%;
-// `;
 
 export default SectionAirpodsMax;

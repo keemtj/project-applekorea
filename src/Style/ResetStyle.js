@@ -19,7 +19,7 @@ const ResetStyle = createGlobalStyle`
     background: transparent;
   }
   body {
-    background: #000000;
+    ${'' /* background: #000000; */}
   }
 `;
 

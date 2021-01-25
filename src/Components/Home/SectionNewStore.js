@@ -6,36 +6,43 @@ import { ChevronRight } from '@styled-icons/entypo/ChevronRight';
 const SectionNewStore = () => {
   return (
     <StSection>
-      <StWrapper>
-        <h2>Apple 여의도</h2>
-        <div>곧 만나요.</div>
-      </StWrapper>
-      <StMoreInfo>
-        <StList>
-          <StLink to="/project-applekorea/mac">더 알아보기</StLink>
+      <Link to="/project-applekorea/newstore">
+        <StHeadline>
+          <h2>Apple 여의도</h2>
+          <p>곧 만나요.</p>
+        </StHeadline>
+      </Link>
+      <StContents>
+        <StLink to="/project-applekorea/newstore">
+          <span>더 알아보기</span>
           <StChevronRight />
-        </StList>
-      </StMoreInfo>
-      <Link to="/project-applekorea/mac">
-        <StImage src="images/home_new_store.jpg" alt="애플 여의도" />
+        </StLink>
+      </StContents>
+      <Link to="/project-applekorea/newstore">
+        <StBackgroundImage
+          src="images/home_new_store.jpg"
+          alt="여의도 스토어 이미지"
+        />
       </Link>
     </StSection>
   );
 };
 
-/* <row-start> / <column-start> / <row-end> / <column-end> */
 const StSection = styled.section`
-  grid-area: 3 / 1 / 3 / 1;
+  grid-area: 3/1/3/1;
+  background-color: black;
   width: 100%;
   position: relative;
   overflow: hidden;
 `;
 
-const StWrapper = styled.div`
+const StHeadline = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40rem;
+  color: black;
 
   position: absolute;
   z-index: 2;
@@ -43,39 +50,36 @@ const StWrapper = styled.div`
   left: calc(50% - 20rem);
   right: 50%;
 
-  width: 40rem;
-
   & > h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 500;
   }
-  & > div {
-    margin-top: 1.2rem;
+  & > p {
+    margin-top: 2rem;
     font-size: 2rem;
     font-weight: 400;
   }
 `;
 
-const StMoreInfo = styled.ul`
+const StContents = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   position: absolute;
-  z-index: 2;
-  top: 23%;
-  left: calc(50% - 4.5rem);
+  top: 25%;
+  left: calc(50% - 7.5rem);
 
   width: fit-content;
+  & > :last-child {
+    margin-left: 3rem;
+  }
   font-size: 1.6rem;
 `;
 
-const StList = styled.li`
-  display: flex;
-`;
-
 const StLink = styled(Link)`
+  display: flex;
   color: #0266cc;
   text-decoration: none;
   &:hover {
@@ -89,11 +93,11 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StImage = styled.img`
-  position: absolute;
-  z-index: 1;
-  left: -30%;
-  width: 160%;
+const StBackgroundImage = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 `;
 
 export default SectionNewStore;

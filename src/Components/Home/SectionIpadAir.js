@@ -6,40 +6,46 @@ import { ChevronRight } from '@styled-icons/entypo/ChevronRight';
 const SectionIpadAir = () => {
   return (
     <StSection>
-      <StWrapper>
-        <h2>iPad Air</h2>
-        <div>강력하다. 다채롭다. 경이롭다. </div>
-      </StWrapper>
-      <StMoreInfo>
-        <StList>
-          <StLink to="/project-applekorea/mac">더 알아보기</StLink>
+      <Link to="/project-applekorea/ipad">
+        <StHeadline>
+          <h2>iPad Air</h2>
+          <p>강력하다. 다채롭다. 경이롭다. </p>
+        </StHeadline>
+      </Link>
+      <StContents>
+        <StLink to="/project-applekorea/ipad">
+          <span>더 알아보기</span>
           <StChevronRight />
-        </StList>
-        <StList>
-          <StLink to="/project-applekorea/mac">구입하기</StLink>
+        </StLink>
+        <StLink to="/project-applekorea/ipad">
+          <span>구매하기</span>
           <StChevronRight />
-        </StList>
-      </StMoreInfo>
-      <Link to="/project-applekorea/mac">
-        <StImage src="images/home_ipad_air.jpg" alt="에어팟 맥스" />
+        </StLink>
+      </StContents>
+      <Link to="/project-applekorea/ipad">
+        <StBackgroundImage
+          src="images/home_ipad_air.jpg"
+          alt="아이패드 에어 이미지"
+        />
       </Link>
     </StSection>
   );
 };
 
-/* <row-start> / <column-start> / <row-end> / <column-end> */
 const StSection = styled.section`
-  grid-area: 1 / 2 / 1 / 2;
+  grid-area: 1/2/1/2;
   width: 100%;
   position: relative;
   overflow: hidden;
 `;
 
-const StWrapper = styled.div`
+const StHeadline = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40rem;
+  color: black;
 
   position: absolute;
   z-index: 2;
@@ -47,27 +53,24 @@ const StWrapper = styled.div`
   left: calc(50% - 20rem);
   right: 50%;
 
-  width: 40rem;
-
   & > h2 {
     font-size: 4rem;
     font-weight: 500;
   }
-  & > div {
-    margin-top: 1.2rem;
+  & > p {
+    margin-top: 2rem;
     font-size: 2rem;
     font-weight: 400;
   }
 `;
 
-const StMoreInfo = styled.ul`
+const StContents = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   position: absolute;
-  z-index: 2;
   top: 25%;
   left: calc(50% - 9.5rem);
 
@@ -78,11 +81,8 @@ const StMoreInfo = styled.ul`
   font-size: 1.6rem;
 `;
 
-const StList = styled.li`
-  display: flex;
-`;
-
 const StLink = styled(Link)`
+  display: flex;
   color: #0266cc;
   text-decoration: none;
   &:hover {
@@ -96,12 +96,11 @@ const StChevronRight = styled(ChevronRight)`
   color: #0266cc;
 `;
 
-const StImage = styled.img`
-  position: absolute;
-  z-index: 1;
-  left: -30%;
-  bottom: 0;
+const StBackgroundImage = styled.img`
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 `;
 
 export default SectionIpadAir;
