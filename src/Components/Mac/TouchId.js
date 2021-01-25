@@ -47,7 +47,6 @@ const StSection = styled.section`
     linear-gradient(90deg, #172538, #18263a 50%);
   border: none;
   border-radius: 3rem;
-  height: 70rem;
 `;
 
 const StHeader = styled.header`

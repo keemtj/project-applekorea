@@ -135,7 +135,8 @@ const Footer = () => {
 const StFooter = styled.footer`
   padding: 0rem 1.5rem;
   width: 100%;
-  background-color: #f5f5f7;
+  /* background-color: #f5f5f7; */
+  background-color: #151516;
   font-size: 1.1rem;
 `;
 
@@ -149,7 +150,8 @@ const StWrapper = styled.div`
 const StProvision = styled.section`
   border-bottom: 1px solid #d2d2d7;
   padding-bottom: 2rem;
-  color: #86868b;
+  /* color: #86868b; */
+  color: #515154;
   line-height: 1.5;
   word-break: keep-all;
   & > a {
@@ -179,7 +181,8 @@ const StCategories = styled.section`
 `;
 
 const StIndex = styled.li`
-  color: #1d1d1f;
+  /* color: #1d1d1f; */
+  color: white;
   font-weight: 600;
 `;
 

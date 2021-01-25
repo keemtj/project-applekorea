@@ -25,6 +25,8 @@ import Mike from './Mike';
 import Scissor from './Scissor';
 import TouchBar from './TouchBar';
 import TouchId from './TouchId';
+import Wifi from './Wifi';
+import Thunderbolt from './Thunderbolt';
 
 const Mac = () => {
   return (
@@ -88,7 +90,7 @@ const Mac = () => {
       <KeyboardSection />
       <Grid
         col={12}
-        row={1}
+        row={2}
         height={70}
         cgap={2.5}
         rgap={2.5}
@@ -103,9 +105,21 @@ const Mac = () => {
         <TouchId />
       </Grid>
       <ConnectivitySection />
-      <Grid>
-        <section>섹션1</section>
-        <section>섹션2</section>
+      <Grid
+        col={12}
+        row={1}
+        height={70}
+        cgap={2.5}
+        rgap={2.5}
+        margin={'auto'}
+        marginTop={-17.5}
+        marginBottom={15}
+        padding={2.5}
+        width={100}
+        maxWidth={145}
+      >
+        <Wifi />
+        <Thunderbolt />
       </Grid>
     </StMain>
   );
