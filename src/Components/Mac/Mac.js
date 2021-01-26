@@ -29,6 +29,9 @@ import Wifi from './Wifi';
 import Thunderbolt from './Thunderbolt';
 
 const Mac = () => {
+  React.useLayoutEffect(() => {
+    document.body.style.backgroundColor = 'black';
+  }, []);
   return (
     <StMain>
       <MainSection />

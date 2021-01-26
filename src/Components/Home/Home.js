@@ -12,6 +12,9 @@ import SectionNewStore from './SectionNewStore';
 import SectionWatch from './SectionWatch';
 
 const Home = () => {
+  React.useLayoutEffect(() => {
+    document.body.style.backgroundColor = 'white';
+  }, []);
   return (
     <StMain>
       <Grid col={1} row={3} height={70} cgap={0} rgap={1} paddingTop={1}>
