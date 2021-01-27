@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import Grid from '../../Layout/Grid';
 import MainSection from './MainSection';
@@ -29,7 +29,7 @@ import Wifi from './Wifi';
 import Thunderbolt from './Thunderbolt';
 
 const Mac = () => {
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     document.body.style.backgroundColor = 'black';
   }, []);
   return (

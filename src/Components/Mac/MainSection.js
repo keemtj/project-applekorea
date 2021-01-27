@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import useScrollFadeIn from '../../Hooks/useScrollFadeIn';
 
 const MainSection = () => {
+  const videoAnimation = useScrollFadeIn();
+  const upAnimation = useScrollFadeIn('up');
+
   return (
     <StSection>
       <StMacBookProVideo
         src="videos/mac_macbook_pro.mp4"
         typeof="video/mp4"
         autoPlay={true}
+        {...videoAnimation}
       />
-      <StArticle1>
+      <StArticle1 {...upAnimation}>
         <StProductName>MacBook Pro</StProductName>
         <StHeadline>프로 중의 프로.</StHeadline>
         <StContent1>
