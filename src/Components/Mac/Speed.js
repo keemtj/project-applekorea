@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import useLightOn from '../../Hooks/useLightOn';
 
 const Speed = () => {
+  const lightOn = useLightOn(40, 0.99);
+
   return (
     <StSection>
+      <StSectionInner {...lightOn} />
       <StHeader>
         <h3>속도 및 반응성</h3>
       </StHeader>
       <StContents>
         <StHeadline>
           <span>켜는 즉시</span>
-          <span>강력하고</span>
-          <span>빠릿하게.</span>
+          <StSecondHeadline>강력하고</StSecondHeadline>
+          <StSecondHeadline>빠릿하게.</StSecondHeadline>
         </StHeadline>
         <StParagraph>
           M1 칩과 macOS Big Sur가 만나 시스템 전체가 더욱 빠릿빠릿하게
@@ -34,6 +38,15 @@ const StSection = styled.section`
   border-radius: 3rem;
   background: center / cover url(images/mac_speed_bg.jpg) no-repeat;
   overflow: hidden;
+  position: relative;
+  z-index: -2;
+`;
+
+const StSectionInner = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 `;
 
 const StHeader = styled.header`
@@ -67,6 +80,10 @@ const StHeadline = styled.p`
   & :nth-child(2) {
     text-indent: -2rem;
   }
+`;
+
+const StSecondHeadline = styled.span`
+  z-index: -2;
 `;
 
 const StParagraph = styled.p`

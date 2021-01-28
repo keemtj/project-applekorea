@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import usePlayVideo from '../../Hooks/usePlayVideo';
 
 const Gpu = () => {
-  const playVideo = usePlayVideo(1.0);
+  const playVideo = usePlayVideo(0.99);
 
   return (
     <StSection>
