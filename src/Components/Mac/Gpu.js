@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import usePlayVideo from '../../Hooks/usePlayVideo';
 
 const Gpu = () => {
+  const playVideo = usePlayVideo(1.0);
+
   return (
     <StSection>
       <StHeader>
@@ -34,7 +37,7 @@ const Gpu = () => {
         <span style={{ lineHeight: '1.5' }}>더 빠른</span>
         <span style={{ lineHeight: '1.5' }}>그래픽 성능</span>
       </StKeyword>
-      <StVideo src="videos/mac_gpu.mp4" type="video/mp4" autoPlay={true} />
+      <StVideo src="videos/mac_gpu.mp4" type="video/mp4" {...playVideo} />
     </StSection>
   );
 };
@@ -127,7 +130,10 @@ const StKeyword = styled.div`
 const StVideo = styled.video`
   position: absolute;
   z-index: -1;
+  width: 100%;
   height: 70rem;
+  object-fit: cover;
+  object-position: 50% 50%;
 `;
 
 export default Gpu;

@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import usePlayVideo from '../../Hooks/usePlayVideo';
 
 const Cooling = () => {
+  const playVideo = usePlayVideo(0.8);
+
   return (
     <StSection>
       <StHeader>
@@ -10,7 +13,7 @@ const Cooling = () => {
       <StHeadline>
         <span>액티브 쿨링으로 빠른 처리 속도를 유지합니다.</span>
       </StHeadline>
-      <StVideo src="videos/mac_cooling.mp4" type="video/mp4" autoPlay={true} />
+      <StVideo src="videos/mac_cooling.mp4" type="video/mp4" {...playVideo} />
     </StSection>
   );
 };
