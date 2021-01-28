@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import usePlayVideo from '../../Hooks/usePlayVideo';
 
 const M1Section = () => {
+  const playVideo = usePlayVideo(0.2);
+
   return (
     <StSection>
       <StArticle>
@@ -21,7 +24,7 @@ const M1Section = () => {
           </span>
         </StContents>
       </StArticle>
-      <StM1Video src="videos/mac_m1.mp4" typeof="video/mp4" />
+      <StM1Video src="videos/mac_m1.mp4" typeof="video/mp4" {...playVideo} />
     </StSection>
   );
 };
