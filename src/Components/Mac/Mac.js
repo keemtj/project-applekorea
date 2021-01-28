@@ -2,6 +2,7 @@ import React, { useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import Grid from '../../Layout/Grid';
 import MainSection from './MainSection';
+import M1Section from './M1Section';
 import RetinaSection from './RetinaSection';
 import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
@@ -32,9 +33,11 @@ const Mac = () => {
   useLayoutEffect(() => {
     document.body.style.backgroundColor = 'black';
   }, []);
+
   return (
     <StMain>
       <MainSection />
+      <M1Section />
       <Grid
         col={12}
         row={7}
