@@ -34,8 +34,6 @@ const Mac = () => {
     document.body.style.backgroundColor = 'black';
     window.scrollTo(0, 0);
   }, []);
-  // useEffect(() => {
-  // });
   return (
     <StMain>
       <MainSection />
