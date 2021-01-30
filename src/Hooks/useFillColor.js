@@ -7,15 +7,16 @@ const useFillColor = (percent, threshold = 0) => {
     const { current } = dom;
 
     if (entry.isIntersecting) {
-      current.style.transitionProperty =
-        'background -webkit-background-clip color';
-      current.style.transitionDuration = '5s';
+      current.style.transitionProperty = 'all';
+      current.style.transitionDuration = '2s';
       current.style.transitionTimingFunction = 'linear';
       current.style.transitionDelay = `0s`;
       current.style.background =
-        'linear-gradient(to top, #4cd265 0% 100%, white 100% 100%)';
+        'linear-gradient(to top, #4cd265 50%, white 50%)';
+      current.style.backgroundSize = '100% 200%';
+      current.style.backgroundPosition = 'bottom left';
       current.style.WebkitBackgroundClip = 'text';
-      current.style.color = 'transparent';
+      current.style.WebkitTextFillColor = 'transparent';
     }
   }, []);
 
@@ -32,9 +33,11 @@ const useFillColor = (percent, threshold = 0) => {
   return {
     ref: dom,
     style: {
-      background: `linear-gradient(to top, #4cd265 0% ${percent}%, white ${percent}% 100%)`,
+      background: `linear-gradient(to top, #4cd265 50%, white 50%)`,
+      backgroundSize: '100% 200%',
+      backgroundPosition: 'top left',
       WebkitBackgroundClip: 'text',
-      color: 'transparent',
+      WebkitTextFillColor: 'transparent',
     },
   };
 };
