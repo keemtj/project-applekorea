@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import useFillColor from '../../Hooks/useFillColor';
 
 const Battery = () => {
-  const fillColor = useFillColor(0, 1);
+  const fillColor = useFillColor(1);
 
   return (
     <StSection>

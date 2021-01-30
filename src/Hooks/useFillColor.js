@@ -1,6 +1,6 @@
 import { useRef, useEffect, useCallback } from 'react';
 
-const useFillColor = (percent, threshold = 0) => {
+const useFillColor = (threshold = 0) => {
   const dom = useRef();
 
   const handleScroll = useCallback(([entry]) => {
