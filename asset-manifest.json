@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/project-applekorea/static/js/main.c9f69c4b.chunk.js",
-    "main.js.map": "/project-applekorea/static/js/main.c9f69c4b.chunk.js.map",
+    "main.js": "/project-applekorea/static/js/main.1339d283.chunk.js",
+    "main.js.map": "/project-applekorea/static/js/main.1339d283.chunk.js.map",
     "runtime-main.js": "/project-applekorea/static/js/runtime-main.44aabe00.js",
     "runtime-main.js.map": "/project-applekorea/static/js/runtime-main.44aabe00.js.map",
-    "static/js/2.542290ea.chunk.js": "/project-applekorea/static/js/2.542290ea.chunk.js",
-    "static/js/2.542290ea.chunk.js.map": "/project-applekorea/static/js/2.542290ea.chunk.js.map",
+    "static/js/2.66093a37.chunk.js": "/project-applekorea/static/js/2.66093a37.chunk.js",
+    "static/js/2.66093a37.chunk.js.map": "/project-applekorea/static/js/2.66093a37.chunk.js.map",
     "index.html": "/project-applekorea/index.html",
-    "static/js/2.542290ea.chunk.js.LICENSE.txt": "/project-applekorea/static/js/2.542290ea.chunk.js.LICENSE.txt"
+    "static/js/2.66093a37.chunk.js.LICENSE.txt": "/project-applekorea/static/js/2.66093a37.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.44aabe00.js",
-    "static/js/2.542290ea.chunk.js",
-    "static/js/main.c9f69c4b.chunk.js"
+    "static/js/2.66093a37.chunk.js",
+    "static/js/main.1339d283.chunk.js"
   ]
 }
