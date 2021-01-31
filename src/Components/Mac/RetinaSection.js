@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import useOpacity from '../../Hooks/useOpacity';
 
 const RetinaSection = () => {
+  const opacityUp = useOpacity(0.8);
+
   return (
     <StSection>
       <StArticle>
@@ -26,6 +29,7 @@ const RetinaSection = () => {
         <StRetina2
           src="images/mac_retina2.jpg"
           alt="레티나 디스플레이 이미지2"
+          {...opacityUp}
         />
       </StRetinaWrapper>
     </StSection>

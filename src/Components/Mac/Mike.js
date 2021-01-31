@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import usePlayVideo from '../../Hooks/usePlayVideo';
 
 const Mike = () => {
+  const playVideo = usePlayVideo(0.99);
+
   return (
     <StSection>
       <StHeader>
@@ -13,7 +16,7 @@ const Mike = () => {
           <span> 프로급 마이크에 견줄 만큼 향상된 신호 대 잡음비.</span>
         </StParagraph>
         <StVideoWrapper>
-          <StVideo src="videos/mac_mike.mp4" type="video/mp4" autoPlay={true} />
+          <StVideo src="videos/mac_mike.mp4" type="video/mp4" {...playVideo} />
         </StVideoWrapper>
       </StContents>
     </StSection>

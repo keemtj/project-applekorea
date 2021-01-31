@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import useOpacity from '../../Hooks/useOpacity';
 
 const FacetimeSection = () => {
+  const opacityOn = useOpacity(0.8);
+
   return (
     <StSection>
       <StArticle>
@@ -21,7 +24,11 @@ const FacetimeSection = () => {
       </StArticle>
       <StFacetimeWrapper>
         <StFacetime1 src="images/mac_facetime1.jpg" alt="페이스타임 이미지1" />
-        <StFacetime2 src="images/mac_facetime2.png" alt="페이스타임 이미지2" />
+        <StFacetime2
+          src="images/mac_facetime2.png"
+          alt="페이스타임 이미지2"
+          {...opacityOn}
+        />
       </StFacetimeWrapper>
     </StSection>
   );

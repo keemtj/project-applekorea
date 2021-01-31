@@ -102,7 +102,7 @@ const StImage = styled.div`
   background-image: url(images/mac_security.png);
   background-repeat: no-repeat;
   /* position: 14.3%(100/7) 12.5(100/8)*/
-  background-position: 100% 100%;
+  background-position: 0% 0%;
   background-size: 80rem 115.2rem;
 `;
 

@@ -152,6 +152,7 @@ const StProvision = styled.section`
   padding-bottom: 2rem;
   /* color: #86868b; */
   color: #515154;
+  color: #6e6e73;
   line-height: 1.5;
   word-break: keep-all;
   & > a {
@@ -168,6 +169,7 @@ const StCategories = styled.section`
     align-items: flex-start;
     justify-content: flex-start;
     color: #515154;
+    /* color: #6e6e73; */
     & > li {
       flex-grow: 1;
       & li {
@@ -230,5 +232,6 @@ const StArticle = styled.article`
 
 const StSpan = styled.span`
   color: #515154;
+  color: #6e6e73;
 `;
 export default Footer;
