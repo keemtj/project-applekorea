@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ModalPortal from '../../ModalPortal';
 import { Close } from '@styled-icons/evaicons-solid/Close';
+import ModalSubContents from './ModalSubContents';
 
 const Modal = () => {
   React.useEffect(() => {
@@ -61,6 +62,7 @@ const Modal = () => {
                 including versions of Lorem Ipsum.
               </StParagraph>
             </StContent>
+            <ModalSubContents />
           </StModalContents>
           <StCloseButton>
             <StClose />
