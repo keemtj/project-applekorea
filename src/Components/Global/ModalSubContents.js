@@ -59,6 +59,10 @@ const StHr = styled.hr`
 const StMenu = styled.ul`
   display: flex;
   padding-bottom: 4.5rem;
+  font-size: 2.4rem;
+  & > li > span {
+    padding: 0rem 1rem;
+  }
   /* color: ${({ isActive }) => isActive && '#a93ad8'}; */
 `;
 
