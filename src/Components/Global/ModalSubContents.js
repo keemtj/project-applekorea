@@ -1,26 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ModalSubContents = () => {
+const ModalSubContents = props => {
+  console.log(props);
   const value = 1.8;
   const isActive = true;
   return (
     <StContent>
       <StHr />
       <StMenu>
-        <li isActive={isActive}>
-          Xcode
-          <span>/</span>
+        <li>
+          <StItem isActive={isActive}>Xcode</StItem>
+          <StSlash>/</StSlash>
         </li>
         <li>
-          Final Cut Pro
-          <span>/</span>
+          <StItem>Final Cut Pro</StItem>
+          <StSlash>/</StSlash>
         </li>
         <li>
-          Affinity Photo
-          <span>/</span>
+          <StItem>Affinity Photo</StItem>
+          <StSlash>/</StSlash>
         </li>
-        <li>Logic Pro</li>
+        <li>
+          <StItem>Logic Pro</StItem>
+        </li>
       </StMenu>
       <StGroup>
         <StBuildWrapper>
@@ -60,10 +63,16 @@ const StMenu = styled.ul`
   display: flex;
   padding-bottom: 4.5rem;
   font-size: 2.4rem;
-  & > li > span {
-    padding: 0rem 1rem;
-  }
-  /* color: ${({ isActive }) => isActive && '#a93ad8'}; */
+`;
+
+const StItem = styled.span`
+  color: ${({ isActive }) => isActive && '#a93ad8'};
+  cursor: pointer;
+`;
+
+const StSlash = styled.span`
+  padding: 0rem 1rem;
+  color: #a1a1a6;
 `;
 
 const StGroup = styled.div`

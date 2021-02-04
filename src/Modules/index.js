@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import mac from './mac';
+import modal from './modal';
 
-const rootReducer = combineReducers({ mac });
+const rootReducer = combineReducers({ modal });
 
 export default rootReducer;

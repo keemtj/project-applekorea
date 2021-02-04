@@ -2,12 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import ModalPortal from '../../ModalPortal';
 import { Close } from '@styled-icons/evaicons-solid/Close';
-import ModalSubContents from './ModalSubContents';
+// import ModalSubContents from './ModalSubContents';
+import ModalSubContentsContainer from '../../Containers/Global/ModalSubContentsContainer';
 
-const Modal = () => {
-  React.useEffect(() => {
-    document.body.style.overflow = 'hidden';
-  });
+const Modal = ({ modalState, setModalState }) => {
+  console.log(modalState, setModalState);
+  const onCloseModal = () => {
+    // if (!modalState) {
+    //   document.body.style.overflow = 'hidden';
+    // }
+    setModalState(!modalState);
+  };
+
   return (
     <ModalPortal>
       <StModal>
@@ -62,9 +68,9 @@ const Modal = () => {
                 including versions of Lorem Ipsum.
               </StParagraph>
             </StContent>
-            <ModalSubContents />
+            <ModalSubContentsContainer />
           </StModalContents>
-          <StCloseButton>
+          <StCloseButton onClick={onCloseModal}>
             <StClose />
           </StCloseButton>
         </StModalContentsWrapper>
