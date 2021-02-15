@@ -2,47 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import ModalPortal from '../../ModalPortal';
 import { Close } from '@styled-icons/evaicons-solid/Close';
-// import ModalSubContents from './ModalSubContents';
 import ModalSubContentsContainer from '../../Containers/Global/ModalSubContentsContainer';
 
-const Modal = ({ modalState, setModalState }) => {
-  console.log(modalState, setModalState);
-  const onCloseModal = () => {
-    // if (!modalState) {
-    //   document.body.style.overflow = 'hidden';
-    // }
-    setModalState(!modalState);
-  };
-
+const Modal = ({ onCloseModal, modalTitle, modalSubTitle, modalPg }) => {
   return (
     <ModalPortal>
       <StModal>
         <StModalContentsWrapper>
           <StModalContents>
-            <h3>모달 제목</h3>
+            <h3>{modalTitle}</h3>
             <StContent>
-              <h4>모달 서브 제목</h4>
-              <StParagraph>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. It has survived not only five centuries, but also the
-                leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum.
-              </StParagraph>
-            </StContent>
-            <StContent>
-              <h4>모달 서브 제목</h4>
-              <StParagraph>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. It has survived not only five centuries, but also the
-                leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more
-                recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum.
-              </StParagraph>
+              <h4>{modalSubTitle}</h4>
+              <StParagraph>{modalPg}</StParagraph>
             </StContent>
             <StContent>
               <h4>모달 서브 제목</h4>

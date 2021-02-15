@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ModalSubContents = props => {
-  console.log(props);
+const ModalSubContents = () => {
   const value = 1.8;
   const isActive = true;
   return (

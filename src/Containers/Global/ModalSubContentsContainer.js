@@ -2,8 +2,7 @@ import React from 'react';
 import ModalSubContents from '../../Components/Global/ModalSubContents';
 
 const ModalSubContentsContainer = () => {
-  const a = 1;
-  return <ModalSubContents a={a} />;
+  return <ModalSubContents />;
 };
 
 export default ModalSubContentsContainer;

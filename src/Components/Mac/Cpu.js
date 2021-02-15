@@ -1,12 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Modal from '../Global/Modal';
+import ModalContainer from '../../Containers/Global/ModalContainer';
 
-const Cpu = () => {
-  const [modalState, setModalState] = React.useState(false);
-  const onModal = () => {
-    setModalState(!modalState);
-  };
+const Cpu = ({ modalState, setModalState, onModal }) => {
   return (
     <StSection>
       <StHeader>
@@ -29,7 +25,10 @@ const Cpu = () => {
           M1이 그래픽 성능을 높여주는 비결 알아보기
         </StModalTrigger>
         {modalState && (
-          <Modal modalState={modalState} setModalState={setModalState} />
+          <ModalContainer
+            modalState={modalState}
+            setModalState={setModalState}
+          />
         )}
       </StButton>
       <StImage src="images/mac_cpu.png" alt="CPU 이미지" />

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Grid from '../../Layout/Grid';
 import MainSection from './MainSection';
@@ -7,7 +7,7 @@ import RetinaSection from './RetinaSection';
 import FacetimeSection from './FacetimeSection';
 import KeyboardSection from './KeyboardSection';
 import ConnectivitySection from './ConnectivitySection';
-import Cpu from './Cpu';
+import CpuContainer from '../../Containers/Mac/CpuContainer';
 import Gpu from './Gpu';
 import MachineLearning from './MachineLearning';
 import Bigsur from './Bigsur';
@@ -30,10 +30,6 @@ import Wifi from './Wifi';
 import Thunderbolt from './Thunderbolt';
 
 const Mac = () => {
-  useLayoutEffect(() => {
-    document.body.style.backgroundColor = 'black';
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <StMain>
       <MainSection />
@@ -49,7 +45,7 @@ const Mac = () => {
         width={100}
         maxWidth={145}
       >
-        <Cpu />
+        <CpuContainer />
         <Gpu />
         <MachineLearning />
         <Bigsur />
