@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# 📝 Apple korea 클론 코딩
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![applekorea-main](https://user-images.githubusercontent.com/51189962/108586200-31a03580-7390-11eb-8b43-afdd627a1399.gif)
 
-## Available Scripts
+![applekorea-mac](https://user-images.githubusercontent.com/51189962/108586193-2816cd80-7390-11eb-9523-a4af3cd27a15.gif)
 
-In the project directory, you can run:
+리액트로 구현한 Apple사이트 클론 코딩입니다. 현재 메인페이지와 Mac제품 페이지에 대한 작업을 진행하고 있습니다. 클론하면서 중점적으로 공부하게된 부분은 Grid 레이아웃에 대한 이해와 적용, 스크롤 위치에 따른 특정 효과 기능 구현입니다.(인터넷 강의 X)
 
-### `yarn start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 💄 UI Design
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Apple](https://www.apple.com/kr/) 공식 홈페이지를 참고하여 디자인 작업
+- 레이아웃 재사용을 염두하여 Grid Layout 작업(메인, Mac 페이지에 동일한 Grid layout 컴포넌트를 사용)
 
-### `yarn test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧑🏻‍💻 Feature
 
-### `yarn build`
+### 주요 기능 구현
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React-router를 이용하여 SPA 구현
+- 메인 페이지와 Mac 페이지 구현
+- Intersection Observer API를 이용하여 특정 스크롤에서 동영상 재생 및 효과를 넣는 기능 구현(Custom Hooks 적용)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2차 기능 목표
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2차 기능 목표는 위의 주요 기능 구현으로는 사이트에 대한 완성도가 부족해서 추가적으로 기능 작업을 하고 있거나 염두해 두고 있는 목표입니다.
 
-### `yarn eject`
+- [리액트 Portals](https://ko.reactjs.org/docs/portals.html)를 이용하여 모달 기능 구현 및 작업 진행중(Portals는 현재 적용)
+- iphone, ipad, music등 추가 페이지 작업을 통해 전체적인 사이트 완성도 높이기
+- react-redux를 이용하여 각각의 페이지 및 필요한 부분에 대해 상태값 적용하기
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🛠 Techs
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![React](https://img.shields.io/badge/React-53C1DE?style=flat-square&logo=react&logoColor=white)![Styled-Components](https://img.shields.io/badge/Styled_Components-DB7C85?style=flat-square&logo=styled-components&logoColor=white)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br/>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ↩️ Commit History
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[내 커밋 히스토리 보러가기](https://github.com/keemtj/project-applekorea/commits/master)

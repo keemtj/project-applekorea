@@ -6,7 +6,6 @@ const ModalContainer = ({ modalState, setModalState }) => {
   // ! redux
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector(state => state.message.messages);
-  console.log(cpu);
 
   // ! event
   const onCloseModal = () => {
@@ -14,6 +13,7 @@ const ModalContainer = ({ modalState, setModalState }) => {
   };
 
   const modalTitle = 'CPU';
+
   // ! effect
   useEffect(() => {
     console.log('메시지 페이지 들어오는순간~ 데이터 겟또!');
@@ -23,9 +23,7 @@ const ModalContainer = ({ modalState, setModalState }) => {
   if (error) return <div>에러....</div>;
   if (!data) return null;
 
-  return (
-    <Modal onCloseModal={onCloseModal} cpu={cpu} modalTitle={modalTitle} />
-  );
+  return <Modal onCloseModal={onCloseModal} modalTitle={modalTitle} />;
 };
 
 export default ModalContainer;
